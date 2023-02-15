@@ -1,28 +1,31 @@
-name: Pre-Sentence Report Completed
+name: pre-sentence.report.completed
+title: Pre-Sentence Report Completed
+summary: A pre-sentence report has been completed for the probation case
+contentType: application/json
 payload:
   type: object
   properties:
     eventType:
       type: string
-      example: 'pre-sentence.report.completed'
+      example: "pre-sentence.report.completed"
     version:
       type: integer
       example: 1
     detailUrl:
       type: string
-      example: 'https://pre-sentence-service.hmpps.service.gov.uk/api/v1/report/7bdd9561-a97f-47fb-811b-6343a5928368'
+      example: "https://pre-sentence-service.hmpps.service.gov.uk/api/v1/report/7bdd9561-a97f-47fb-811b-6343a5928368"
     occurredAt:
       type: string
-      example: '2022-10-05T12:00:00.000Z'
+      example: "2022-10-05T12:00:00.000Z"
     description:
       type: string
-      example: 'A Pre-Sentence Report has been completed'
+      example: "A Pre-Sentence Report has been completed"
     additionalInformation:
       type: object
       properties:
         reportId:
           type: string
-          example: '7bdd9561-a97f-47fb-811b-6343a5928368'
+          example: "7bdd9561-a97f-47fb-811b-6343a5928368"
     personReference:
       type: object
       properties:
@@ -33,7 +36,7 @@ payload:
             properties:
               type:
                 type: string
-                example: 'CRN'
+                example: "CRN"
               value:
                 type: string
-                example: 'D001022'
+                example: "D001022"
