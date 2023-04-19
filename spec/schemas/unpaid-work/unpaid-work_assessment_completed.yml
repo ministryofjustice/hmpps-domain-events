@@ -1,0 +1,45 @@
+name: unpaid-work.assessment.completed
+title: Unpaid Work Assessment Completed
+summary: An unpaid work assessment has been completed for the probation case
+contentType: application/json
+payload:
+  type: object
+  properties:
+    eventType:
+      type: string
+      example: "unpaid-work.assessment.completed"
+    version:
+      type: integer
+      example: 1
+    detailUrl:
+      type: string
+      example: "https://hmpps-assessments-service.justice.service.gov.uk/api/upw/download/3e51415e-1516-4c6f-81a3-e8f2bfc149e0"
+    occurredAt:
+      type: string
+      example: "2022-10-05T12:00:00.000Z"
+    description:
+      type: string
+      example: "UPW Assessment Completed"
+    additionalInformation:
+      type: object
+      properties:
+        episodeId:
+          type: string
+          example: "3e51415e-1516-4c6f-81a3-e8f2bfc149e0"
+        eventId:
+          type: string
+          example: "1509323237"
+    personReference:
+      type: object
+      properties:
+        identifiers:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                example: "CRN"
+              value:
+                type: string
+                example: "D001022"
