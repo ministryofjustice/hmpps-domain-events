@@ -1,0 +1,42 @@
+name: requirement.manager.allocated
+title: Probation Requirement Manager Allocated
+summary: A new community manager has been assigned to the probation requirement
+contentType: application/json
+payload:
+  type: object
+  properties:
+    eventType:
+      type: string
+      example: "requirement.manager.allocated"
+    version:
+      type: integer
+      example: 1
+    detailUrl:
+      type: string
+      example: "https://hmpps-workload.hmpps.service.justice.gov.uk/allocation/requirements/ea56156d-9f88-402a-934d-0b73c2b5c182"
+    occurredAt:
+      type: string
+      example: "2022-10-05T12:00:00.000Z"
+    description:
+      type: string
+      example: "Requirement allocated event"
+    additionalInformation:
+      type: object
+      properties:
+        allocationId:
+          type: string
+          example: "ea56156d-9f88-402a-934d-0b73c2b5c182"
+    personReference:
+      type: object
+      properties:
+        identifiers:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                example: "CRN"
+              value:
+                type: string
+                example: "X666322"

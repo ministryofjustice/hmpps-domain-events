@@ -1,0 +1,42 @@
+name: event.manager.allocated
+title: Probation Event Manager Allocated
+summary: A new community manager has been assigned to the probation event
+contentType: application/json
+payload:
+  type: object
+  properties:
+    eventType:
+      type: string
+      example: "event.manager.allocated"
+    version:
+      type: integer
+      example: 1
+    detailUrl:
+      type: string
+      example: "https://hmpps-workload.hmpps.service.justice.gov.uk/allocation/event/fbceb85c-d411-453d-ba7a-0553c11e5378"
+    occurredAt:
+      type: string
+      example: "2022-10-05T12:00:00.000Z"
+    description:
+      type: string
+      example: "Event allocated event"
+    additionalInformation:
+      type: object
+      properties:
+        allocationId:
+          type: string
+          example: "fbceb85c-d411-453d-ba7a-0553c11e5378"
+    personReference:
+      type: object
+      properties:
+        identifiers:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                example: "CRN"
+              value:
+                type: string
+                example: "X666322"

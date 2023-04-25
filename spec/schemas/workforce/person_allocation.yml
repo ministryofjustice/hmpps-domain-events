@@ -1,0 +1,42 @@
+name: person.community.manager.allocated
+title: Person Community Manager Allocated 
+summary: A new community manager has been assigned to the person on probation
+contentType: application/json
+payload:
+  type: object
+  properties:
+    eventType:
+      type: string
+      example: "person.community.manager.allocated"
+    version:
+      type: integer
+      example: 1
+    detailUrl:
+      type: string
+      example: "https://hmpps-workload.hmpps.service.justice.gov.uk/allocation/person/1d9ab4b2-7b80-4784-8104-f9a77fd93a31"
+    occurredAt:
+      type: string
+      example: "2022-10-05T12:00:00.000Z"
+    description:
+      type: string
+      example: "Person allocated event"
+    additionalInformation:
+      type: object
+      properties:
+        allocationId:
+          type: string
+          example: "1d9ab4b2-7b80-4784-8104-f9a77fd93a31"
+    personReference:
+      type: object
+      properties:
+        identifiers:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                example: "CRN"
+              value:
+                type: string
+                example: "X666322"
