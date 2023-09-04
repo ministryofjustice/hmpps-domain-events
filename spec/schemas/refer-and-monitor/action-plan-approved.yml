@@ -23,13 +23,20 @@ payload:
     additionalInformation:
       type: object
       properties:
-        actionPlanId: string
-        submittedBy: string
-        referralId: string
-        referralReference: string
-        contractTypeName: string
-        primeProviderName: string
-        actionPlanProbationUserUrl: string
+        properties:
+          actionPlanId:
+            type: string
+          submittedBy:
+            type: string
+          referralId: string
+          referralReference:
+            type: string
+          contractTypeName:
+            type: string
+          primeProviderName:
+            type: string
+          actionPlanProbationUserUrl:
+            type: string
     personReference:
       type: object
       properties:
