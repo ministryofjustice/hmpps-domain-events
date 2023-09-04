@@ -1,0 +1,43 @@
+name: intervention.referral.ended
+title: The referral has ended
+summary: The referral has ended. It might still require admin work from providers.
+contentType: application/json
+payload:
+  type: object
+  properties:
+    eventType:
+      type: string
+      example: "intervention.referral.ended"
+    version:
+      type: integer
+      example: 1
+    detailUrl:
+      type: string
+      example: "https://hmpps-interventions-service-dev.apps.live-1.cloud-platform.service.justice.gov.uk/sent-referral/b43fe6a7-2683-4baf-8fac-55d5129ba028"
+    occurredAt:
+      type: string
+      example: "2022-10-05T12:00:00.000Z"
+    description:
+      type: string
+      example: "The referral has ended. It might still require admin work from providers"
+    additionalInformation:
+      type: object
+      properties:
+        deliveryState: string
+        referralId: string
+        referralURN: string
+        referralProbationUserURL: string
+    personReference:
+      type: object
+      properties:
+        identifiers:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                example: "CRN"
+              value:
+                type: string
+                example: "X716305"
