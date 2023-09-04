@@ -23,10 +23,14 @@ payload:
     additionalInformation:
       type: object
       properties:
-        deliveryState: string
-        referralId: string
-        referralURN: string
-        referralProbationUserURL: string
+        deliveryState:
+          type: string
+        referralId:
+          type: string
+        referralURN:
+          type: string
+        referralProbationUserURL:
+          type: string
     personReference:
       type: object
       properties:
