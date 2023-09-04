@@ -28,7 +28,8 @@ payload:
             type: string
           submittedBy:
             type: string
-          referralId: string
+          referralId:
+            type: string
           referralReference:
             type: string
           contractTypeName:
