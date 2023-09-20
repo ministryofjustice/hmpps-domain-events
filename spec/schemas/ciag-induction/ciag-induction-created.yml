@@ -1,0 +1,55 @@
+name: ciag-induction.created
+title: CIAG Induction Created
+summary: A CIAG induction has been created for a Prisoner.
+contentType: application/json
+payload:
+  type: object
+  properties:
+    eventType:
+      type: string
+      example: "ciag-induction.created"
+    version:
+      type: integer
+      example: 1
+    detailUrl:
+      type: string
+      example: "https://learning-and-work-progress.hmpps.service.justice.gov.uk/plan/A0670DZ/view/overview"
+    occurredAt:
+      type: string
+      example: "2023-10-05T12:00:00.000Z"
+    description:
+      type: string
+      example: "CIAG Induction Completed"
+    additionalInformation:
+      type: object
+      properties:
+        reference:
+          type: string
+          example: "3e51415e-1516-4c6f-81a3-e8f2bfc149e0"
+        prisonId:
+          type: string
+          example: "MDI"
+        userId:
+          type: string
+          example: "JSMITH_GEN"
+        userDisplayName:
+          type: string
+          example: "Jon Smith"
+      required:
+        - "reference"
+        - "prisonId"
+        - "userId"
+    personReference:
+      type: object
+      properties:
+        identifiers:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                example: "CRN"
+              value:
+                type: string
+                example: "D001022"
