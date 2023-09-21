@@ -7,7 +7,8 @@ payload:
   properties:
     eventType:
       type: string
-      example: "ciag-induction.updated"
+      enum:
+        - "ciag-induction.updated"
     version:
       type: integer
       example: 1
@@ -16,6 +17,7 @@ payload:
       example: "https://learning-and-work-progress.hmpps.service.justice.gov.uk/plan/A0670DZ/view/overview"
     occurredAt:
       type: string
+      format: date-time
       example: "2023-11-01T13:00:00.000Z"
     description:
       type: string
