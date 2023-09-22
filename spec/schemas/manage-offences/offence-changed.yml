@@ -1,0 +1,25 @@
+name: manage-offences.offence.changed
+title: Offence Changed
+summary: A CJS offence code has been created or updated
+contentType: application/json
+payload:
+  type: object
+  properties:
+    eventType:
+      type: string
+      example: "manage-offences.offence.changed"
+    version:
+      type: integer
+      example: 1
+    occurredAt:
+      type: string
+      example: "2022-10-05T12:00:00.000Z"
+    description:
+      type: string
+      example: "An offence has been updated/created"
+    additionalInformation:
+      type: object
+      properties:
+        offenceCode:
+          type: string
+          example: "AB06001"
