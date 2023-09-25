@@ -51,7 +51,7 @@ payload:
             properties:
               type:
                 type: string
-                example: "CRN"
+                example: "NOMS"
               value:
                 type: string
-                example: "D001022"
+                example: "G9981UK"
