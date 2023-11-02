@@ -11,7 +11,9 @@ payload:
         applicationId:
           type: string
           example: 05144fcc-9f23-46ec-bedb-cb2038913835
-        bookingId: bookingId
+        bookingId:
+          type: string
+          example: 2c31a01b-801b-4553-a19e-89760717fa5c
     description:
       type: string
       example: An Approved Premises Application has been withdrawn
@@ -49,4 +51,3 @@ payload:
     version:
       type: integer
       example: 1
-

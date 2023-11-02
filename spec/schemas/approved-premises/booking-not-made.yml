@@ -11,7 +11,9 @@ payload:
         applicationId:
           type: string
           example: c537752c-7c6d-4134-a8c2-46bc56a5679b
-        bookingId: bookingId
+        bookingId:
+          type: string
+          example: 2c31a01b-801b-4553-a19e-89760717fa5c
     description:
       type: string
       example: It was not possible to create a Booking on this attempt
@@ -49,4 +51,3 @@ payload:
     version:
       type: integer
       example: 1
-
