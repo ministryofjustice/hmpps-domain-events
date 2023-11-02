@@ -1,0 +1,52 @@
+name: approved-premises.application.withdrawn
+title: approved-premises.application.withdrawn
+summary: An Approved Premises Application has been withdrawn
+contentType: application/json
+payload:
+  type: object
+  properties:
+    additionalInformation:
+      type: object
+      properties:
+        applicationId:
+          type: string
+          example: 05144fcc-9f23-46ec-bedb-cb2038913835
+        bookingId: bookingId
+    description:
+      type: string
+      example: An Approved Premises Application has been withdrawn
+    detailUrl:
+      type: string
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/application-withdrawn/fb0f96b0-c7dc-4512-9b0d-4cfa69632c56
+    eventType:
+      type: string
+      example: approved-premises.application.withdrawn
+    occurredAt:
+      type: string
+      example: '2023-11-02T08:44:13.442076384Z'
+    personReference:
+      type: object
+      properties:
+        identifiers:
+          type: array
+          items:
+          - type: object
+            properties:
+              type:
+                type: string
+                example: CRN
+              value:
+                type: string
+                example: X371199
+          - type: object
+            properties:
+              type:
+                type: string
+                example: NOMS
+              value:
+                type: string
+                example: A7779DY
+    version:
+      type: integer
+      example: 1
+

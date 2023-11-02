@@ -1,0 +1,52 @@
+name: approved-premises.booking.cancelled
+title: approved-premises.booking.cancelled
+summary: An Approved Premises Booking has been cancelled
+contentType: application/json
+payload:
+  type: object
+  properties:
+    additionalInformation:
+      type: object
+      properties:
+        applicationId:
+          type: string
+          example: 4b31df15-140c-4d96-a50e-6a6b841c317a
+        bookingId: bookingId
+    description:
+      type: string
+      example: An Approved Premises Booking has been cancelled
+    detailUrl:
+      type: string
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/booking-cancelled/eb81e892-7c3e-41bb-8f1a-eec07dba8448
+    eventType:
+      type: string
+      example: approved-premises.booking.cancelled
+    occurredAt:
+      type: string
+      example: '2023-10-31T14:23:08.464645313Z'
+    personReference:
+      type: object
+      properties:
+        identifiers:
+          type: array
+          items:
+          - type: object
+            properties:
+              type:
+                type: string
+                example: CRN
+              value:
+                type: string
+                example: X371199
+          - type: object
+            properties:
+              type:
+                type: string
+                example: NOMS
+              value:
+                type: string
+                example: A7779DY
+    version:
+      type: integer
+      example: 1
+
