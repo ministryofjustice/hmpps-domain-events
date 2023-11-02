@@ -11,7 +11,9 @@ payload:
         applicationId:
           type: string
           example: 4b31df15-140c-4d96-a50e-6a6b841c317a
-        bookingId: bookingId
+        bookingId:
+          type: string
+          example: 2c31a01b-801b-4553-a19e-89760717fa5c
     description:
       type: string
       example: An Approved Premises Booking has been cancelled
@@ -49,4 +51,3 @@ payload:
     version:
       type: integer
       example: 1
-
