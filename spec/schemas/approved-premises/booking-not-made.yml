@@ -1,0 +1,52 @@
+name: approved-premises.booking.not-made
+title: approved-premises.booking.not-made
+summary: It was not possible to create a Booking on this attempt
+contentType: application/json
+payload:
+  type: object
+  properties:
+    additionalInformation:
+      type: object
+      properties:
+        applicationId:
+          type: string
+          example: c537752c-7c6d-4134-a8c2-46bc56a5679b
+        bookingId: bookingId
+    description:
+      type: string
+      example: It was not possible to create a Booking on this attempt
+    detailUrl:
+      type: string
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/booking-not-made/9af7a50a-7060-4e62-ad1b-45c70f503907
+    eventType:
+      type: string
+      example: approved-premises.booking.not-made
+    occurredAt:
+      type: string
+      example: '2023-11-01T10:11:52.48415868Z'
+    personReference:
+      type: object
+      properties:
+        identifiers:
+          type: array
+          items:
+          - type: object
+            properties:
+              type:
+                type: string
+                example: CRN
+              value:
+                type: string
+                example: X371199
+          - type: object
+            properties:
+              type:
+                type: string
+                example: NOMS
+              value:
+                type: string
+                example: A7779DY
+    version:
+      type: integer
+      example: 1
+
