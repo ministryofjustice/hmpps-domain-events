@@ -7,7 +7,7 @@ payload:
   properties:
     description:
       type: string
-      example: Licence variation inactivated for licence ID 1
+      example: Licence inactivated for licence ID 1
     detailUrl:
       type: string
       example: https://create-and-vary-a-licence-api-dev.hmpps.service.justice.gov.uk/public/licences/id/1
