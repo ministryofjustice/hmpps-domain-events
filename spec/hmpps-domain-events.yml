@@ -1,0 +1,19 @@
+asyncapi: 3.0.0
+
+info:
+  title: HMPPS Domain Events
+  description: Domain Events Raised by Processes in the Prisons and Probation Service Workflows
+  version: 0.1.0
+
+channels:
+  CVLLicenceActivated:
+    address: "create-and-vary-a-licence/licence-activated"
+    messages:
+      CVLLicenceActivated:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/create-and-vary-a-licence/licence-activated.yml
+
+operations:
+  SendCVLLicenceActivated:
+    action: send
+    channel:
+      $ref: "#/channels/CVLLicenceActivated"
