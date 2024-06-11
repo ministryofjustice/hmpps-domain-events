@@ -6,14 +6,66 @@ info:
   version: 0.1.0
 
 channels:
-  CVLLicenceActivated:
-    address: "create-and-vary-a-licence/licence-activated"
+  HMPPSDomainEvents:
+    bindings:
+      sns:
+        name: hmpps-domain-events-topic
     messages:
+      PrisonCaseNotePublished:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/prison/case-note-published.yml
       CVLLicenceActivated:
         $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/create-and-vary-a-licence/licence-activated.yml
+      CVLLicenceInactivated:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/create-and-vary-a-licence/licence-inactivated.yml
+      CVLLicenceVariationActivated:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/create-and-vary-a-licence/licence-variation-activated.yml
+      CVLLicenceVariationInactivated:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/create-and-vary-a-licence/licence-variation-inactivated.yml
+      ManageOffencesOffenceChanged:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/manage-offences/offence-changed.yml
+      TieringTierCalculationComplete:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/tiering/tier_calculation_complete.yml
+      WorkforceEventAllocation:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/workforce/event_allocation.yml
+      WorkforceRequirementAllocation:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/workforce/requirement_allocation.yml
+      WorkforcePersonAllocation:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/workforce/person_allocation.yml
+      UnpaidWorkAssessmentCompleted:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/unpaid-work/unpaid-work_assessment_completed.yml
+      ApprovedPremisesBookingMade:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/approved-premises/booking-made.yml
+      ApprovedPremisesBookingNotMade:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/approved-premises/booking-not-made.yml
+      ApprovedPremisesBookingCancelled:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/approved-premises/booking-cancelled.yml
+      ApprovedPremisesApplicationAssessed:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/approved-premises/application-assessed.yml
+      ApprovedPremisesApplicationSubmitted:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/approved-premises/application-submitted.yml
+      ApprovedPremisesApplicationWithdrawn:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/approved-premises/application-withdrawn.yml
+      ConsiderARecallManagementOversight:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/consider-a-recall/management_oversight.yml
+      ConsiderARecallRecommendationStarted:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/consider-a-recall/recommendation_started.yml
+      ReferAndMonitorReferralEnded:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/refer-and-monitor/referral-ended.yml
+      ReferAndMonitorActionPlanApproved:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/refer-and-monitor/action-plan-approved.yml
+      ReferAndMonitorActionPlanSubmitted:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/refer-and-monitor/action-plan-submitted.yml
+      ReferAndMonitorSessionApptFeedback:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/refer-and-monitor/session-appointment-feedback-submitted.yml
+      ReferAndMonitorInitialApptFeedback:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/refer-and-monitor/initial-assessment-appointment-feedback-submitted.yml
+      OffenderManagementPOMAllocated:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/offender-management/pom-allocated.yml
+      OffenderManagementHandoverChanged:
+        $ref: https://raw.githubusercontent.com/ministryofjustice/hmpps-domain-events/main/spec/schemas/offender-management/handover-changed.yml
 
 operations:
-  SendCVLLicenceActivated:
+  SendHMPPSDomainEvents:
     action: send
     channel:
-      $ref: "#/channels/CVLLicenceActivated"
+      $ref: "#/channels/HMPPSDomainEvents"
