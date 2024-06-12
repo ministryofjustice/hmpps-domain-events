@@ -38,6 +38,11 @@ Domain event messages in all environments are logged to Application Insights
 via the [HMPPS Domain Event Logger](https://github.com/ministryofjustice/hmpps-domain-event-logger)
 
 Validation of example messages:
-```sh
+```shell
 check-jsonschema --schemafile=schema/hmpps-domain-event.json <example-message.json>
+```
+
+Validation of AsyncAPI message schemas:
+```shell
+check-jsonschema --verbose --schemafile=https://asyncapi.com/definitions/3.0.0/messageObject.json ./spec/schemas/[path-to.yml]
 ```

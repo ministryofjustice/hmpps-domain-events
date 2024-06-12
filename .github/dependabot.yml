@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /script
+    groups:
+      minor-updates:
+        update-types: [minor, patch]
+    schedule:
+      interval: monthly
+      day: tuesday
