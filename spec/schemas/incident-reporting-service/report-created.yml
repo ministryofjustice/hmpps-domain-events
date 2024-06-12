@@ -1,0 +1,33 @@
+name: incident.report.created
+title: Incident reporting service – a report was created
+contentType: application/json
+payload:
+  type: object
+  properties:
+    version:
+      const: 1
+    eventType:
+      const: incident.report.created
+    occurredAt:
+      type: string
+      format: date-time
+      example: 2023-12-05T12:34:56+00:00
+    description:
+      type: string
+      example: An incident report has been created
+    additionalInformation:
+      type: object
+      properties:
+        incidentNumber:
+          description: Human-readable incident report number
+          type: string
+          example: "247314"
+        id:
+          description: Internal incident report identifier
+          type: string
+          format: uuid
+          example: 11111111-2222-3333-4444-555555555555
+        source:
+          description: Where the report was created
+          enum: [DPS, NOMIS]
+          example: DPS
