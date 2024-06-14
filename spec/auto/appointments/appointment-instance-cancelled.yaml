@@ -1,0 +1,26 @@
+contentType: application/json
+name: appointments.appointment-instance.cancelled
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        appointmentInstanceId:
+          example: 221101
+          type: integer
+      type: object
+    description:
+      example: An appointment instance has been cancelled in the activities management
+        service
+      type: string
+    eventType:
+      example: appointments.appointment-instance.cancelled
+      type: string
+    occurredAt:
+      example: '2024-06-10T17:23:45.331608915'
+      type: string
+    version:
+      example: '1'
+      type: string
+  type: object
+summary: An appointment instance has been cancelled in the activities management service
+title: appointments.appointment-instance.cancelled

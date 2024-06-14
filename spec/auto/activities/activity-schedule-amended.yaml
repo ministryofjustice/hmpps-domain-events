@@ -1,0 +1,26 @@
+contentType: application/json
+name: activities.activity-schedule.amended
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        activityScheduleId:
+          example: 695
+          type: integer
+      type: object
+    description:
+      example: An activity schedule has been updated in the activities management
+        service
+      type: string
+    eventType:
+      example: activities.activity-schedule.amended
+      type: string
+    occurredAt:
+      example: '2024-06-14T08:00:20.657912967'
+      type: string
+    version:
+      example: '1'
+      type: string
+  type: object
+summary: An activity schedule has been updated in the activities management service
+title: activities.activity-schedule.amended

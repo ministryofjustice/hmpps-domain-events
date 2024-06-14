@@ -1,0 +1,45 @@
+contentType: application/json
+name: intervention.referral.assigned
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        assignedTo:
+          example: INTERVENTIONS-DEVS@DIGITAL.JUSTICE.GOV.UK
+          type: string
+        referralId:
+          example: 08fbf1e8-db03-497b-8804-d0fba4647645
+          type: string
+      type: object
+    description:
+      example: A referral has been assigned to a caseworker / service provider
+      type: string
+    detailUrl:
+      example: https://hmpps-interventions-service-dev.apps.live-1.cloud-platform.service.justice.gov.uk/sent-referral/08fbf1e8-db03-497b-8804-d0fba4647645
+      type: string
+    eventType:
+      example: intervention.referral.assigned
+      type: string
+    occurredAt:
+      example: '2024-06-12T09:12:04.484749084+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X777703
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A referral has been assigned to a caseworker / service provider
+title: intervention.referral.assigned

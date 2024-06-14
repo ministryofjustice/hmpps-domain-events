@@ -1,0 +1,64 @@
+contentType: application/json
+name: risk-assessment.scores.rsr.determined
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        AssessmentDate:
+          example: '2024-06-13T17:52:15+01:00'
+          type: string
+        EventNumber:
+          example: 1
+          type: integer
+        OSPContactBand: OSPContactBand
+        OSPContactScore: OSPContactScore
+        OSPDirectContactBand:
+          example: NA
+          type: string
+        OSPDirectContactScore: OSPDirectContactScore
+        OSPIndecentBand: OSPIndecentBand
+        OSPIndecentScore: OSPIndecentScore
+        OSPIndirectIndecentBand:
+          example: NA
+          type: string
+        OSPIndirectIndecentScore: OSPIndirectIndecentScore
+        RSRBand:
+          example: L
+          type: string
+        RSRScore: RSRScore
+        RSRStaticOrDynamic:
+          example: STATIC
+          type: string
+      type: object
+    description:
+      example: Risk assessment scores have been determined
+      type: string
+    detailUrl:
+      example: https://some-url-where-we-can-get-more-info-this-might-not-exist
+      type: string
+    eventType:
+      example: risk-assessment.scores.rsr.determined
+      type: string
+    occurredAt:
+      example: '2024-06-13T17:52:15+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X777960
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Risk assessment scores have been determined
+title: risk-assessment.scores.rsr.determined

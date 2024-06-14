@@ -1,0 +1,42 @@
+contentType: application/json
+name: requirement.manager.allocated
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        allocationId:
+          example: 7851970b-f230-4927-8149-8f2e58799f0c
+          type: string
+      type: object
+    description:
+      example: Requirement allocated event
+      type: string
+    detailUrl:
+      example: https://hmpps-workload-dev.hmpps.service.justice.gov.uk/allocation/requirements/7851970b-f230-4927-8149-8f2e58799f0c
+      type: string
+    eventType:
+      example: requirement.manager.allocated
+      type: string
+    occurredAt:
+      example: '2024-06-13T17:53:29.111600526+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X777965
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Requirement allocated event
+title: requirement.manager.allocated

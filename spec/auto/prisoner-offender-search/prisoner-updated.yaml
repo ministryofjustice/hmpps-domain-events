@@ -1,0 +1,35 @@
+contentType: application/json
+name: prisoner-offender-search.prisoner.updated
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        categoriesChanged:
+          items:
+          - example: STATUS
+            type: string
+          - example: LOCATION
+            type: string
+          type: array
+        nomsNumber:
+          example: A7928DZ
+          type: string
+      type: object
+    description:
+      example: A prisoner record has been updated
+      type: string
+    detailUrl:
+      example: https://prisoner-search-dev.prison.service.justice.gov.uk/prisoner/A7928DZ
+      type: string
+    eventType:
+      example: prisoner-offender-search.prisoner.updated
+      type: string
+    occurredAt:
+      example: '2024-06-14T09:06:16.150359178+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A prisoner record has been updated
+title: prisoner-offender-search.prisoner.updated

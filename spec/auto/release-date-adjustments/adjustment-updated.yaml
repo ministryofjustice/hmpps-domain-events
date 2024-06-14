@@ -1,0 +1,33 @@
+contentType: application/json
+name: release-date-adjustments.adjustment.updated
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        id:
+          example: 042c1093-3793-4a58-b85c-665e6c1e96ee
+          type: string
+        lastEvent: lastEvent
+        offenderNo:
+          example: A6074DZ
+          type: string
+        source:
+          example: NOMIS
+          type: string
+        unusedDeductions: unusedDeductions
+      type: object
+    description:
+      example: An adjustment has been updated
+      type: string
+    eventType:
+      example: release-date-adjustments.adjustment.updated
+      type: string
+    occurredAt:
+      example: '2024-06-11T11:50:07.859358539+01:00'
+      type: string
+    version:
+      example: '1.0'
+      type: string
+  type: object
+summary: An adjustment has been updated
+title: release-date-adjustments.adjustment.updated

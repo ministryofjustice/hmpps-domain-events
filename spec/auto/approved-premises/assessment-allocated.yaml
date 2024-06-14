@@ -1,0 +1,51 @@
+contentType: application/json
+name: approved-premises.assessment.allocated
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId:
+          example: 18203ad1-7ec5-4de0-b1d2-0e19e1d7aa7f
+          type: string
+        bookingId: bookingId
+      type: object
+    description:
+      example: An Approved Premises Assessment has been allocated
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/assessment-allocated/d4fe4eef-ff0a-4d93-9e2d-75c0e86f987d
+      type: string
+    eventType:
+      example: approved-premises.assessment.allocated
+      type: string
+    occurredAt:
+      example: '2024-06-10T13:52:11.055287309Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X371199
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A7779DY
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An Approved Premises Assessment has been allocated
+title: approved-premises.assessment.allocated

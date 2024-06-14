@@ -1,0 +1,39 @@
+contentType: application/json
+name: probation-case.engagement.created
+payload:
+  properties:
+    additionalInformation:
+      properties: {}
+      type: object
+    description:
+      example: A probation case record for a person has been created in Delius
+      type: string
+    detailUrl:
+      example: https://domain-events-and-delius-dev.hmpps.service.justice.gov.uk/probation-case.engagement.created/X777984
+      type: string
+    eventType:
+      example: probation-case.engagement.created
+      type: string
+    occurredAt:
+      example: '2024-06-14T09:06:41.67+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X777984
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A probation case record for a person has been created in Delius
+title: probation-case.engagement.created

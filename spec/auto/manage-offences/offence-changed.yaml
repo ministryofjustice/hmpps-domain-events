@@ -1,0 +1,25 @@
+contentType: application/json
+name: manage-offences.offence.changed
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        offenceCode:
+          example: AS14012C
+          type: string
+      type: object
+    description:
+      example: An offence has been updated/created
+      type: string
+    eventType:
+      example: manage-offences.offence.changed
+      type: string
+    occurredAt:
+      example: '2024-06-08T00:25:00.12850894+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An offence has been updated/created
+title: manage-offences.offence.changed

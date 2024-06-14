@@ -1,0 +1,37 @@
+contentType: application/json
+name: prisoner-alerts.alert-code-created
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        alertCode:
+          example: DOM2
+          type: string
+        reason:
+          example: USER
+          type: string
+        source:
+          example: DPS
+          type: string
+        type:
+          example: alertCode
+          type: string
+        url:
+          example: https://alerts-api-dev.hmpps.service.justice.gov.uk/alert-codes/DOM2
+          type: string
+      type: object
+    description:
+      example: An alert code has been created in the alerts reference data service
+      type: string
+    eventType:
+      example: prisoner-alerts.alert-code-created
+      type: string
+    occurredAt:
+      example: '2024-06-11T14:12:40.874928967+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An alert code has been created in the alerts reference data service
+title: prisoner-alerts.alert-code-created

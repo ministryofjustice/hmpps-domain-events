@@ -1,0 +1,51 @@
+contentType: application/json
+name: applications.cas2.application.submitted
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId:
+          example: f9a1e49e-b7f7-4cda-ba1d-02bb02f82324
+          type: string
+        bookingId: bookingId
+      type: object
+    description:
+      example: An application has been submitted for a CAS2 placement
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/cas2/application-submitted/2b58e998-b399-4106-b978-4ad3449bcee7
+      type: string
+    eventType:
+      example: applications.cas2.application.submitted
+      type: string
+    occurredAt:
+      example: '2024-06-11T14:16:14.216117613Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A3692EA
+                type: string
+            type: object
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X777425
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An application has been submitted for a CAS2 placement
+title: applications.cas2.application.submitted

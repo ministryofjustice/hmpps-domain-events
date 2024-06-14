@@ -1,0 +1,63 @@
+contentType: application/json
+name: probation-case.registration.added
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        createdDateAndTime:
+          example: Fri Jun 14 09:06:52 BST 2024
+          type: string
+        registerTypeCode:
+          example: RHRH
+          type: string
+        registerTypeDescription:
+          example: High RoSH
+          type: string
+        registrationCategoryCode:
+          example: ''
+          type: string
+        registrationCategoryDescription:
+          example: ''
+          type: string
+        registrationDate:
+          example: Fri Jun 14 00:00:00 BST 2024
+          type: string
+        registrationId:
+          example: '2500687775'
+          type: string
+        registrationLevelCode:
+          example: ''
+          type: string
+        registrationLevelDescription:
+          example: ''
+          type: string
+      type: object
+    description:
+      example: A new registration has been added to the probation case
+      type: string
+    eventType:
+      example: probation-case.registration.added
+      type: string
+    occurredAt:
+      example: '2024-06-14T09:06:52.739+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X777978
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A new registration has been added to the probation case
+title: probation-case.registration.added

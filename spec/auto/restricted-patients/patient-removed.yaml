@@ -1,0 +1,28 @@
+contentType: application/json
+name: restricted-patients.patient.removed
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        prisonerNumber:
+          example: A9130DY
+          type: string
+      type: object
+    description:
+      example: Prisoner no longer a restricted patient
+      type: string
+    eventType:
+      example: restricted-patients.patient.removed
+      type: string
+    occurredAt:
+      example: '2024-06-11T15:58:50.602794139+01:00'
+      type: string
+    publishedAt:
+      example: '2024-06-11T15:58:50.602794139+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Prisoner no longer a restricted patient
+title: restricted-patients.patient.removed

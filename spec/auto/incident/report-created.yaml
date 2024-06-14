@@ -1,0 +1,32 @@
+name: incident.report.created
+title: incident.report.created
+summary: 018ff265-13d0-751f-a077-34f8312be5b8 An incident report has been created
+contentType: application/json
+payload:
+  type: object
+  properties:
+    additionalInformation:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 018ff265-13d0-751f-a077-34f8312be5b8
+        source:
+          type: string
+          example: NOMIS
+          description: Where the report was created
+          enum:
+          - DPS
+          - NOMIS
+    description:
+      type: string
+      example: 018ff265-13d0-751f-a077-34f8312be5b8 An incident report has been created
+    eventType:
+      type: string
+      example: incident.report.created
+    occurredAt:
+      type: string
+      example: '2024-06-07T12:11:01.655876096+01:00'
+    version:
+      type: string
+      example: '1.0'

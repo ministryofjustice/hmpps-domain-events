@@ -1,0 +1,50 @@
+contentType: application/json
+name: prison-recall.recommendation.consideration
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        bookedBy:
+          properties:
+            username:
+              example: AUTOMATEDTESTUSER
+              type: string
+          type: object
+        contactOutcome: contactOutcome
+        recommendationUrl:
+          example: https://make-recall-decision-dev.hmpps.service.justice.gov.uk/cases/X776531/overview
+          type: string
+        referralId: referralId
+      type: object
+    description:
+      example: Management Oversight - Consideration Rationale
+      type: string
+    detailUrl:
+      example: https://make-recall-decision-api-dev.hmpps.service.justice.gov.uk/recallConsiderationRationale/X776531
+      type: string
+    eventType:
+      example: prison-recall.recommendation.consideration
+      type: string
+    occurredAt:
+      example: '2024-06-07T14:25:24.490Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X776531
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Management Oversight - Consideration Rationale
+title: prison-recall.recommendation.consideration

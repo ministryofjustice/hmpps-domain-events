@@ -1,0 +1,28 @@
+contentType: application/json
+name: incident.report.amended
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        id:
+          example: 01900269-5374-7d42-9e55-1657aad21a64
+          type: string
+        source:
+          example: NOMIS
+          type: string
+      type: object
+    description:
+      example: 01900269-5374-7d42-9e55-1657aad21a64 An incident report has been amended
+      type: string
+    eventType:
+      example: incident.report.amended
+      type: string
+    occurredAt:
+      example: '2024-06-10T14:50:09.735603174+01:00'
+      type: string
+    version:
+      example: '1.0'
+      type: string
+  type: object
+summary: 01900269-5374-7d42-9e55-1657aad21a64 An incident report has been amended
+title: incident.report.amended

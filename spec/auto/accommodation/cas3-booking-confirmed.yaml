@@ -1,0 +1,45 @@
+contentType: application/json
+name: accommodation.cas3.booking.confirmed
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId:
+          example: dbfd396f-1334-4dd3-b228-eb17710b40f5
+          type: string
+        bookingId:
+          example: 1d0f6bcb-b742-4a53-8988-aeb192350824
+          type: string
+      type: object
+    description:
+      example: A booking has been confirmed for a Transitional Accommodation premises
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/cas3/booking-confirmed/ec3a6961-4ef8-4b85-ad27-a7c5a15e52e8
+      type: string
+    eventType:
+      example: accommodation.cas3.booking.confirmed
+      type: string
+    occurredAt:
+      example: '2024-06-10T23:00:00Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X371199
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A booking has been confirmed for a Transitional Accommodation premises
+title: accommodation.cas3.booking.confirmed

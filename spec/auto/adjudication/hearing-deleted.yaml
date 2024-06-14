@@ -1,0 +1,37 @@
+contentType: application/json
+name: adjudication.hearing.deleted
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        chargeNumber:
+          example: MDI-000169
+          type: string
+        hearingId:
+          example: 1941571
+          type: integer
+        prisonId:
+          example: MDI
+          type: string
+        prisonerNumber:
+          example: A7780DY
+          type: string
+        status:
+          example: UNSCHEDULED
+          type: string
+      type: object
+    description:
+      example: 'Adjudication hearing deleted:  MDI-000169'
+      type: string
+    eventType:
+      example: adjudication.hearing.deleted
+      type: string
+    occurredAt:
+      example: '2024-06-12T09:24:07.68407847+01:00'
+      type: string
+    version:
+      example: '1.0'
+      type: string
+  type: object
+summary: 'Adjudication hearing deleted:  MDI-000169'
+title: adjudication.hearing.deleted

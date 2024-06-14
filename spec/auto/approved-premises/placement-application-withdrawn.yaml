@@ -1,0 +1,51 @@
+contentType: application/json
+name: approved-premises.placement-application.withdrawn
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId:
+          example: a618c003-0538-4a97-990f-898881d95489
+          type: string
+        bookingId: bookingId
+      type: object
+    description:
+      example: An Approved Premises Request for Placement has been withdrawn
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/placement-application-withdrawn/bf72198e-ed05-432a-8470-b403ccffea17
+      type: string
+    eventType:
+      example: approved-premises.placement-application.withdrawn
+      type: string
+    occurredAt:
+      example: '2024-06-11T18:40:38.093238707Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X371199
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A7779DY
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An Approved Premises Request for Placement has been withdrawn
+title: approved-premises.placement-application.withdrawn

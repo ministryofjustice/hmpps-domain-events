@@ -1,0 +1,57 @@
+contentType: application/json
+name: prison-offender-events.prisoner.contact-unapproved
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        approvedVisitor:
+          example: 'false'
+          type: string
+        bookingId:
+          example: '1059192'
+          type: string
+        contactId:
+          example: '7453031'
+          type: string
+        nomsNumber:
+          example: G7361GP
+          type: string
+        personId:
+          example: '4680890'
+          type: string
+        username:
+          example: DBULL_ADM
+          type: string
+      type: object
+    description:
+      example: A contact for a prisoner has been unapproved
+      type: string
+    eventType:
+      example: prison-offender-events.prisoner.contact-unapproved
+      type: string
+    occurredAt:
+      example: '2024-06-07T16:32:06+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: G7361GP
+                type: string
+            type: object
+          type: array
+      type: object
+    publishedAt:
+      example: '2024-06-07T16:32:06.969437162+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A contact for a prisoner has been unapproved
+title: prison-offender-events.prisoner.contact-unapproved

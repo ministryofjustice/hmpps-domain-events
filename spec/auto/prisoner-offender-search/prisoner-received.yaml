@@ -1,0 +1,36 @@
+contentType: application/json
+name: prisoner-offender-search.prisoner.received
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        nomsNumber:
+          example: A7928DZ
+          type: string
+        prisonId:
+          example: SWI
+          type: string
+        reason:
+          example: READMISSION
+          type: string
+      type: object
+    description:
+      example: 'A prisoner has been received into a prison with reason: re-admission
+        on an existing booking'
+      type: string
+    detailUrl:
+      example: https://prisoner-search-dev.prison.service.justice.gov.uk/prisoner/A7928DZ
+      type: string
+    eventType:
+      example: prisoner-offender-search.prisoner.received
+      type: string
+    occurredAt:
+      example: '2024-06-14T09:06:16.22603998+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: 'A prisoner has been received into a prison with reason: re-admission on
+  an existing booking'
+title: prisoner-offender-search.prisoner.received

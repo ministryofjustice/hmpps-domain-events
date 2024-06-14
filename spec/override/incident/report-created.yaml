@@ -1,0 +1,8 @@
+payload:
+  properties:
+    additionalInformation:
+      type: object
+      properties:
+        source:
+          description: Where the report was created
+          enum: [DPS, NOMIS]

@@ -1,0 +1,51 @@
+contentType: application/json
+name: accommodation.cas3.referral.submitted
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId:
+          example: cb0ac598-b3ee-4bc2-95e9-49932987f3ef
+          type: string
+        bookingId: bookingId
+      type: object
+    description:
+      example: A referral for Transitional Accommodation has been submitted
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/cas3/referral-submitted/8768e985-158d-4eba-be1b-2b6bf20ca1de
+      type: string
+    eventType:
+      example: accommodation.cas3.referral.submitted
+      type: string
+    occurredAt:
+      example: '2024-06-11T14:13:29.471079Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X777421
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A3690EA
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A referral for Transitional Accommodation has been submitted
+title: accommodation.cas3.referral.submitted

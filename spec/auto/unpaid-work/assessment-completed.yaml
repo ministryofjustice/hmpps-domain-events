@@ -1,0 +1,45 @@
+contentType: application/json
+name: unpaid-work.assessment.completed
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        episodeId:
+          example: 8a2f98c3-ecf4-418c-a5c5-a15c9860c613
+          type: string
+        eventId:
+          example: '2501024920'
+          type: string
+      type: object
+    description:
+      example: UPW Assessment Completed
+      type: string
+    detailUrl:
+      example: https://dev.hmpps-assessments.service.justice.gov.uk/api/upw/download/8a2f98c3-ecf4-418c-a5c5-a15c9860c613
+      type: string
+    eventType:
+      example: unpaid-work.assessment.completed
+      type: string
+    occurredAt:
+      example: '2024-06-11T15:18:53.341+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X777466
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: '2'
+      type: string
+  type: object
+summary: UPW Assessment Completed
+title: unpaid-work.assessment.completed

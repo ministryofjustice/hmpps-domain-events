@@ -1,0 +1,52 @@
+contentType: application/json
+name: prison-recall.recommendation.deleted
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        bookedBy:
+          properties:
+            username:
+              example: AUTOMATEDTESTUSER
+              type: string
+          type: object
+        contactOutcome:
+          example: ''
+          type: string
+        recommendationUrl:
+          example: https://make-recall-decision-dev.hmpps.service.justice.gov.uk/cases/X770001/overview
+          type: string
+        referralId: referralId
+      type: object
+    description:
+      example: Deleted recommendation in 'Consider a recall'
+      type: string
+    detailUrl:
+      example: https://make-recall-decision-api-dev.hmpps.service.justice.gov.uk/system-delete-recommendation/X770001
+      type: string
+    eventType:
+      example: prison-recall.recommendation.deleted
+      type: string
+    occurredAt:
+      example: '2024-06-12T07:00:47.587Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X770001
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Deleted recommendation in 'Consider a recall'
+title: prison-recall.recommendation.deleted

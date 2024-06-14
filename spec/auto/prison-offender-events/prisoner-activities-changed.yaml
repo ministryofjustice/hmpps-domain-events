@@ -1,0 +1,48 @@
+contentType: application/json
+name: prison-offender-events.prisoner.activities-changed
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        action:
+          example: END
+          type: string
+        prisonId:
+          example: RSI
+          type: string
+        user:
+          example: MHALMA_GEN
+          type: string
+      type: object
+    description:
+      example: A prisoner's activities have been changed
+      type: string
+    eventType:
+      example: prison-offender-events.prisoner.activities-changed
+      type: string
+    occurredAt:
+      example: '2024-06-11T14:41:21+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: G6512VC
+                type: string
+            type: object
+          type: array
+      type: object
+    publishedAt:
+      example: '2024-06-11T14:41:21.995798484+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A prisoner's activities have been changed
+title: prison-offender-events.prisoner.activities-changed

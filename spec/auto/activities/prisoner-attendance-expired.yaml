@@ -1,0 +1,27 @@
+contentType: application/json
+name: activities.prisoner.attendance-expired
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        attendanceId:
+          example: 746630
+          type: integer
+      type: object
+    description:
+      example: An unmarked prisoner attendance has been expired in the activities
+        management service
+      type: string
+    eventType:
+      example: activities.prisoner.attendance-expired
+      type: string
+    occurredAt:
+      example: '2024-06-12T08:17:53.402157475'
+      type: string
+    version:
+      example: '1'
+      type: string
+  type: object
+summary: An unmarked prisoner attendance has been expired in the activities management
+  service
+title: activities.prisoner.attendance-expired

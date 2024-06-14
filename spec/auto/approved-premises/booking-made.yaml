@@ -1,0 +1,51 @@
+contentType: application/json
+name: approved-premises.booking.made
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId:
+          example: f686a2d3-31d0-4bd0-9654-f3f360c4c567
+          type: string
+        bookingId: bookingId
+      type: object
+    description:
+      example: An Approved Premises booking has been made
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/booking-made/f5c7c619-de11-497b-9f37-bf8368bcf7ff
+      type: string
+    eventType:
+      example: approved-premises.booking.made
+      type: string
+    occurredAt:
+      example: '2024-06-11T18:32:50.965579271Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X371199
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A7779DY
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An Approved Premises booking has been made
+title: approved-premises.booking.made

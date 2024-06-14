@@ -1,0 +1,38 @@
+contentType: application/json
+name: incentives.prisoner.next-review-date-changed
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        alertsAdded: alertsAdded
+        alertsRemoved: alertsRemoved
+        bookingId: bookingId
+        id:
+          example: 1211185
+          type: integer
+        incentiveLevel: incentiveLevel
+        nextReviewDate:
+          example: '2024-09-13'
+          type: string
+        nomsNumber:
+          example: A7928DZ
+          type: string
+        prisonId: prisonId
+        reason: reason
+        removedNomsNumber: removedNomsNumber
+      type: object
+    description:
+      example: A prisoner's next incentive review date has changed
+      type: string
+    eventType:
+      example: incentives.prisoner.next-review-date-changed
+      type: string
+    occurredAt:
+      example: '2024-06-13T09:06:46.151709313+01:00'
+      type: string
+    version:
+      example: '1.0'
+      type: string
+  type: object
+summary: A prisoner's next incentive review date has changed
+title: incentives.prisoner.next-review-date-changed

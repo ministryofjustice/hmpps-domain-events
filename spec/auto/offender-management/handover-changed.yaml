@@ -1,0 +1,36 @@
+contentType: application/json
+name: offender-management.handover.changed
+payload:
+  properties:
+    description:
+      example: Handover date and/or responsibility was updated
+      type: string
+    detailUrl:
+      example: https://dev.moic.service.justice.gov.uk/api/handovers/A0260DZ
+      type: string
+    eventType:
+      example: offender-management.handover.changed
+      type: string
+    occurredAt:
+      example: '2024-06-13T16:48:11Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A0260DZ
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Handover date and/or responsibility was updated
+title: offender-management.handover.changed

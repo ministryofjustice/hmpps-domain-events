@@ -1,0 +1,36 @@
+contentType: application/json
+name: incentives.iep-review.inserted
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        alertsAdded: alertsAdded
+        alertsRemoved: alertsRemoved
+        bookingId: bookingId
+        id:
+          example: 2907711
+          type: integer
+        incentiveLevel: incentiveLevel
+        nextReviewDate: nextReviewDate
+        nomsNumber:
+          example: A3765EA
+          type: string
+        prisonId: prisonId
+        reason: reason
+        removedNomsNumber: removedNomsNumber
+      type: object
+    description:
+      example: An IEP review has been added
+      type: string
+    eventType:
+      example: incentives.iep-review.inserted
+      type: string
+    occurredAt:
+      example: '2024-06-14T09:06:54.301203945+01:00'
+      type: string
+    version:
+      example: '1.0'
+      type: string
+  type: object
+summary: An IEP review has been added
+title: incentives.iep-review.inserted

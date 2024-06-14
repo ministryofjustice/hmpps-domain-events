@@ -1,0 +1,28 @@
+contentType: application/json
+name: prison-visit.booked
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        reference:
+          example: sx-hr-or-xe
+          type: string
+      type: object
+    description:
+      example: Prison Visit Booked
+      type: string
+    eventType:
+      example: prison-visit.booked
+      type: string
+    occurredAt:
+      example: '2024-06-11T16:42:11.102558+01:00'
+      type: string
+    prisonerId:
+      example: G5039UH
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Prison Visit Booked
+title: prison-visit.booked

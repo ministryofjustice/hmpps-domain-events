@@ -1,0 +1,45 @@
+contentType: application/json
+name: intervention.referral.concluded
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        deliveryState:
+          example: CANCELLED
+          type: string
+        referralId:
+          example: 1bae1c70-cfb8-443e-9548-b32991a9a3c3
+          type: string
+      type: object
+    description:
+      example: The referral has concluded, no more work is needed
+      type: string
+    detailUrl:
+      example: https://hmpps-interventions-service-dev.apps.live-1.cloud-platform.service.justice.gov.uk/sent-referral/1bae1c70-cfb8-443e-9548-b32991a9a3c3
+      type: string
+    eventType:
+      example: intervention.referral.concluded
+      type: string
+    occurredAt:
+      example: '2024-06-12T15:08:47.06300754+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X718253
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: The referral has concluded, no more work is needed
+title: intervention.referral.concluded

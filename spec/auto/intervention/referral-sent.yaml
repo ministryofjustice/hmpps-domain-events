@@ -1,0 +1,42 @@
+contentType: application/json
+name: intervention.referral.sent
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        referralId:
+          example: 4df5d584-4c4c-42ee-b4c6-ed4c98ee6fa5
+          type: string
+      type: object
+    description:
+      example: A referral has been sent to a Service Provider
+      type: string
+    detailUrl:
+      example: https://hmpps-interventions-service-dev.apps.live-1.cloud-platform.service.justice.gov.uk/sent-referral/4df5d584-4c4c-42ee-b4c6-ed4c98ee6fa5
+      type: string
+    eventType:
+      example: intervention.referral.sent
+      type: string
+    occurredAt:
+      example: '2024-06-13T17:52:26.55647055+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X777958
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A referral has been sent to a Service Provider
+title: intervention.referral.sent

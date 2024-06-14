@@ -1,0 +1,39 @@
+contentType: application/json
+name: prisoner-offender-search.prisoner.alerts-updated
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        alertsAdded:
+          items:
+          - example: PEEP
+            type: string
+          type: array
+        alertsRemoved:
+          items: []
+          type: array
+        bookingId:
+          example: '1203237'
+          type: string
+        nomsNumber:
+          example: G0308GK
+          type: string
+      type: object
+    description:
+      example: 'A prisoner had their alerts updated, added: 1, removed: 0'
+      type: string
+    detailUrl:
+      example: https://prisoner-search-dev.prison.service.justice.gov.uk/prisoner/G0308GK
+      type: string
+    eventType:
+      example: prisoner-offender-search.prisoner.alerts-updated
+      type: string
+    occurredAt:
+      example: '2024-06-13T10:35:49.666195061+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: 'A prisoner had their alerts updated, added: 1, removed: 0'
+title: prisoner-offender-search.prisoner.alerts-updated

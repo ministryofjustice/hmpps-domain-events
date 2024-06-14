@@ -1,0 +1,26 @@
+contentType: application/json
+name: activities.prisoner.allocation-amended
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        allocationId:
+          example: 4548
+          type: integer
+      type: object
+    description:
+      example: A prisoner allocation has been amended in the activities management
+        service
+      type: string
+    eventType:
+      example: activities.prisoner.allocation-amended
+      type: string
+    occurredAt:
+      example: '2024-06-11T14:41:22.799850884'
+      type: string
+    version:
+      example: '1'
+      type: string
+  type: object
+summary: A prisoner allocation has been amended in the activities management service
+title: activities.prisoner.allocation-amended

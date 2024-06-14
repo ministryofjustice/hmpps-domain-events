@@ -1,0 +1,33 @@
+contentType: application/json
+name: release-date-adjustments.adjustment.inserted
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        id:
+          example: 70a36189-5ad2-4010-897c-f6a76b290da3
+          type: string
+        lastEvent: lastEvent
+        offenderNo:
+          example: A8919DZ
+          type: string
+        source:
+          example: DPS
+          type: string
+        unusedDeductions: unusedDeductions
+      type: object
+    description:
+      example: An adjustment has been created
+      type: string
+    eventType:
+      example: release-date-adjustments.adjustment.inserted
+      type: string
+    occurredAt:
+      example: '2024-06-11T17:38:25.679988268+01:00'
+      type: string
+    version:
+      example: '1.0'
+      type: string
+  type: object
+summary: An adjustment has been created
+title: release-date-adjustments.adjustment.inserted
