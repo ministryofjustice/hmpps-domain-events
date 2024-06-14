@@ -31,7 +31,7 @@ def single_domain_event(event_type):
     # Do we have any messages?
     if len(full_response["tables"][0]["rows"]) == 0:
         sys.exit(
-            f"No domain event message found for '{event_type}' in Application Insights in the previous three days"
+            f"No domain event message found for '{event_type}' in Application Insights in the previous seven days"
         )
 
     raw_message = json.loads(full_response["tables"][0]["rows"][0][3])["rawMessage"]
