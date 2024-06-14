@@ -1,0 +1,36 @@
+name: non-associations.created
+title: Non-associations – a non-association was created
+contentType: application/json
+payload:
+  type: object
+  properties:
+    version:
+      const: "1.0"
+    eventType:
+      const: non-associations.created
+    occurredAt:
+      type: string
+      format: date-time
+      example: 2023-12-05T12:34:56+00:00
+    description:
+      type: string
+      example: "A non-association has been created:  123456"
+    additionalInformation:
+      type: object
+      properties:
+        id:
+          description: Non-associations ID
+          type: integer
+          example: 123456
+        nsPrisonerNumber1:
+          description: Prisoner number to not associate
+          type: string
+          example: "A1111AA"
+        nsPrisonerNumber2:
+          description: Prisoner number to not associate
+          type: string
+          example: "B2222BB"
+        source:
+          description: Where the report was created
+          enum: [DPS, NOMIS]
+          example: DPS
