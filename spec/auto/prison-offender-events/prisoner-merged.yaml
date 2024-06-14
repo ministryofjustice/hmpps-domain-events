@@ -1,0 +1,51 @@
+contentType: application/json
+name: prison-offender-events.prisoner.merged
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        bookingId:
+          example: '1216772'
+          type: string
+        nomsNumber:
+          example: A3645EA
+          type: string
+        reason:
+          example: MERGE
+          type: string
+        removedNomsNumber:
+          example: A3646EA
+          type: string
+      type: object
+    description:
+      example: A prisoner has been merged from A3646EA to A3645EA
+      type: string
+    eventType:
+      example: prison-offender-events.prisoner.merged
+      type: string
+    occurredAt:
+      example: '2024-06-10T16:24:18+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A3645EA
+                type: string
+            type: object
+          type: array
+      type: object
+    publishedAt:
+      example: '2024-06-10T16:24:18.216237762+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A prisoner has been merged from A3646EA to A3645EA
+title: prison-offender-events.prisoner.merged

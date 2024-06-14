@@ -1,0 +1,48 @@
+contentType: application/json
+name: probation-case.registration.deleted
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        registerTypeCode:
+          example: RMRH
+          type: string
+        registerTypeDescription:
+          example: Medium RoSH
+          type: string
+        registrationId:
+          example: '2500093070'
+          type: string
+        updatedDateAndTime:
+          example: Thu Feb 20 00:08:57 GMT 2020
+          type: string
+      type: object
+    description:
+      example: A registration has been completely removed from the probation case
+      type: string
+    eventType:
+      example: probation-case.registration.deleted
+      type: string
+    occurredAt:
+      example: '2024-06-11T15:53:47.142+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X334505
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A registration has been completely removed from the probation case
+title: probation-case.registration.deleted

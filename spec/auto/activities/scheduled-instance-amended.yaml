@@ -1,0 +1,26 @@
+contentType: application/json
+name: activities.scheduled-instance.amended
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        scheduledInstanceId:
+          example: 116926
+          type: integer
+      type: object
+    description:
+      example: A scheduled instance has been amended in the activities management
+        service
+      type: string
+    eventType:
+      example: activities.scheduled-instance.amended
+      type: string
+    occurredAt:
+      example: '2024-06-11T14:47:03.832026886'
+      type: string
+    version:
+      example: '1'
+      type: string
+  type: object
+summary: A scheduled instance has been amended in the activities management service
+title: activities.scheduled-instance.amended

@@ -1,0 +1,31 @@
+contentType: application/json
+name: location.inside.prison.created
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        id:
+          example: 019002bf-de0e-73c2-86a9-54474fdbdab7
+          type: string
+        key:
+          example: CFI-BB-2-2
+          type: string
+        source:
+          example: NOMIS
+          type: string
+      type: object
+    description:
+      example: CFI-BB-2-2 A location inside prison has been created
+      type: string
+    eventType:
+      example: location.inside.prison.created
+      type: string
+    occurredAt:
+      example: '2024-06-10T16:24:07.130382481+01:00'
+      type: string
+    version:
+      example: '1.0'
+      type: string
+  type: object
+summary: CFI-BB-2-2 A location inside prison has been created
+title: location.inside.prison.created

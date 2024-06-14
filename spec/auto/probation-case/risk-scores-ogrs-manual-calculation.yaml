@@ -1,0 +1,48 @@
+contentType: application/json
+name: probation-case.risk-scores.ogrs.manual-calculation
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        AssessmentDate:
+          example: 2024-06-07T00:00:00+01:00[Europe/London]
+          type: string
+        OGRS3Yr1:
+          example: '20'
+          type: string
+        OGRS3Yr2:
+          example: '33'
+          type: string
+        eventNumber:
+          example: '2'
+          type: string
+      type: object
+    description:
+      example: OGRS scores have been determined via a manual calculation
+      type: string
+    eventType:
+      example: probation-case.risk-scores.ogrs.manual-calculation
+      type: string
+    occurredAt:
+      example: '2024-06-07T12:59:36.886+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X177375
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: OGRS scores have been determined via a manual calculation
+title: probation-case.risk-scores.ogrs.manual-calculation

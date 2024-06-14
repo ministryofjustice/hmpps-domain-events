@@ -1,0 +1,51 @@
+contentType: application/json
+name: applications.cas2.application.status-updated
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId:
+          example: 97029695-8c62-45cb-bf64-55d54b4f4b66
+          type: string
+        bookingId: bookingId
+      type: object
+    description:
+      example: An assessor has updated the status of a CAS2 application
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/cas2/application-status-updated/c58b69a1-c419-4eaf-af74-e052cb16ff8b
+      type: string
+    eventType:
+      example: applications.cas2.application.status-updated
+      type: string
+    occurredAt:
+      example: '2024-05-01T19:28:58Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A5276DZ
+                type: string
+            type: object
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X320741
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An assessor has updated the status of a CAS2 application
+title: applications.cas2.application.status-updated

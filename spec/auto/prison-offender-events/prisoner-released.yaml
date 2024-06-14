@@ -1,0 +1,60 @@
+contentType: application/json
+name: prison-offender-events.prisoner.released
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        currentLocation:
+          example: OUTSIDE_PRISON
+          type: string
+        currentPrisonStatus:
+          example: NOT_UNDER_PRISON_CARE
+          type: string
+        details:
+          example: Movement reason code CR
+          type: string
+        nomisMovementReasonCode:
+          example: CR
+          type: string
+        nomsNumber:
+          example: A3695EA
+          type: string
+        prisonId:
+          example: SWI
+          type: string
+        reason:
+          example: RELEASED
+          type: string
+      type: object
+    description:
+      example: A prisoner has been released from prison
+      type: string
+    eventType:
+      example: prison-offender-events.prisoner.released
+      type: string
+    occurredAt:
+      example: '2024-06-11T15:14:46+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A3695EA
+                type: string
+            type: object
+          type: array
+      type: object
+    publishedAt:
+      example: '2024-06-11T15:15:47.049605521+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A prisoner has been released from prison
+title: prison-offender-events.prisoner.released

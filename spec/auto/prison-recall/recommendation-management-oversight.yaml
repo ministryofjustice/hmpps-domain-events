@@ -1,0 +1,52 @@
+contentType: application/json
+name: prison-recall.recommendation.management-oversight
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        bookedBy:
+          properties:
+            username:
+              example: MRD-SPO
+              type: string
+          type: object
+        contactOutcome:
+          example: DECISION_NOT_TO_RECALL
+          type: string
+        recommendationUrl:
+          example: https://make-recall-decision-dev.hmpps.service.justice.gov.uk/cases/X514364/overview
+          type: string
+        referralId: referralId
+      type: object
+    description:
+      example: Management Oversight - Recall
+      type: string
+    detailUrl:
+      example: https://make-recall-decision-api-dev.hmpps.service.justice.gov.uk/managementOversight/X514364
+      type: string
+    eventType:
+      example: prison-recall.recommendation.management-oversight
+      type: string
+    occurredAt:
+      example: '2024-06-13T20:07:14.858Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X514364
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Management Oversight - Recall
+title: prison-recall.recommendation.management-oversight

@@ -1,0 +1,51 @@
+contentType: application/json
+name: accommodation.cas3.booking.cancelled
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId: applicationId
+        bookingId:
+          example: 1756846a-4916-4f1c-9c27-701fb8d74487
+          type: string
+      type: object
+    description:
+      example: A booking for a Transitional Accommodation premises has been cancelled
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/cas3/booking-cancelled/9019b4e6-c594-476e-bbe3-338c051001af
+      type: string
+    eventType:
+      example: accommodation.cas3.booking.cancelled
+      type: string
+    occurredAt:
+      example: '2024-06-11T11:45:48.43650369Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X371199
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A7779DY
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A booking for a Transitional Accommodation premises has been cancelled
+title: accommodation.cas3.booking.cancelled

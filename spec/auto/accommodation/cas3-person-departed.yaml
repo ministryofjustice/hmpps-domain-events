@@ -1,0 +1,51 @@
+contentType: application/json
+name: accommodation.cas3.person.departed
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId: applicationId
+        bookingId:
+          example: b10914c1-4357-473c-899a-711fb071367a
+          type: string
+      type: object
+    description:
+      example: Someone has left a Transitional Accommodation premises
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/cas3/person-departed/2ccb0e24-d067-44e7-a290-62b7ba83a547
+      type: string
+    eventType:
+      example: accommodation.cas3.person.departed
+      type: string
+    occurredAt:
+      example: '2024-10-17T00:00:00Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X371199
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A7779DY
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Someone has left a Transitional Accommodation premises
+title: accommodation.cas3.person.departed

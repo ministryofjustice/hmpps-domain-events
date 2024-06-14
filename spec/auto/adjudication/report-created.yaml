@@ -1,0 +1,34 @@
+contentType: application/json
+name: adjudication.report.created
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        chargeNumber:
+          example: MDI-000169
+          type: string
+        prisonId:
+          example: MDI
+          type: string
+        prisonerNumber:
+          example: A7780DY
+          type: string
+        status:
+          example: UNSCHEDULED
+          type: string
+      type: object
+    description:
+      example: 'An adjudication has been created:  MDI-000169'
+      type: string
+    eventType:
+      example: adjudication.report.created
+      type: string
+    occurredAt:
+      example: '2024-06-10T11:43:52.47881059+01:00'
+      type: string
+    version:
+      example: '1.0'
+      type: string
+  type: object
+summary: 'An adjudication has been created:  MDI-000169'
+title: adjudication.report.created

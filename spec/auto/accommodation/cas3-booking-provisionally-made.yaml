@@ -1,0 +1,54 @@
+contentType: application/json
+name: accommodation.cas3.booking.provisionally-made
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId:
+          example: eefb4f78-a3d6-4a5b-99af-5766aa521eb4
+          type: string
+        bookingId:
+          example: 2d5a9fd5-c8fb-490e-a4c3-e2d27a03ba47
+          type: string
+      type: object
+    description:
+      example: A booking has been provisionally made for a Transitional Accommodation
+        premises
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/cas3/booking-provisionally-made/81ca2480-616b-4025-b11f-b70f7ef97894
+      type: string
+    eventType:
+      example: accommodation.cas3.booking.provisionally-made
+      type: string
+    occurredAt:
+      example: '2024-06-11T11:47:49.204034786Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X371199
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A7779DY
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A booking has been provisionally made for a Transitional Accommodation premises
+title: accommodation.cas3.booking.provisionally-made

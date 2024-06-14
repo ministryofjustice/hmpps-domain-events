@@ -1,0 +1,51 @@
+contentType: application/json
+name: approved-premises.assessment.appealed
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId:
+          example: f7f8743d-e024-48d1-89d6-8c7424574448
+          type: string
+        bookingId: bookingId
+      type: object
+    description:
+      example: An Approved Premises Assessment has been appealed
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/assessment-appealed/645af45e-5412-47ca-8e82-54d90d0599a8
+      type: string
+    eventType:
+      example: approved-premises.assessment.appealed
+      type: string
+    occurredAt:
+      example: '2024-06-12T08:07:07.685709457Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X371199
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A7779DY
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An Approved Premises Assessment has been appealed
+title: approved-premises.assessment.appealed

@@ -1,0 +1,26 @@
+contentType: application/json
+name: activities.activity-schedule.created
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        activityScheduleId:
+          example: 807
+          type: integer
+      type: object
+    description:
+      example: A new activity schedule has been created in the activities management
+        service
+      type: string
+    eventType:
+      example: activities.activity-schedule.created
+      type: string
+    occurredAt:
+      example: '2024-06-11T16:46:26.739576482'
+      type: string
+    version:
+      example: '1'
+      type: string
+  type: object
+summary: A new activity schedule has been created in the activities management service
+title: activities.activity-schedule.created

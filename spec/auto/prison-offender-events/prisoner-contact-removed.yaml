@@ -1,0 +1,54 @@
+contentType: application/json
+name: prison-offender-events.prisoner.contact-removed
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        approvedVisitor:
+          example: 'false'
+          type: string
+        bookingId:
+          example: '1059192'
+          type: string
+        contactId:
+          example: '7550877'
+          type: string
+        nomsNumber:
+          example: G7361GP
+          type: string
+        personId:
+          example: '4729932'
+          type: string
+      type: object
+    description:
+      example: A contact for a prisoner has been removed
+      type: string
+    eventType:
+      example: prison-offender-events.prisoner.contact-removed
+      type: string
+    occurredAt:
+      example: '2024-06-07T16:21:45+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: G7361GP
+                type: string
+            type: object
+          type: array
+      type: object
+    publishedAt:
+      example: '2024-06-07T16:21:45.940184262+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A contact for a prisoner has been removed
+title: prison-offender-events.prisoner.contact-removed

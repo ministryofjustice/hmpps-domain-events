@@ -1,0 +1,51 @@
+contentType: application/json
+name: approved-premises.assessment.info-requested
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId:
+          example: 566a7fee-0498-4ddf-82b0-84df7cd6e1b5
+          type: string
+        bookingId: bookingId
+      type: object
+    description:
+      example: An information request has been made for an Approved Premises Assessment
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/further-information-requested/9fc0f206-466a-4d0a-831d-04846f16dff9
+      type: string
+    eventType:
+      example: approved-premises.assessment.info-requested
+      type: string
+    occurredAt:
+      example: '2024-06-11T18:34:02.222368905Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X371199
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A7779DY
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An information request has been made for an Approved Premises Assessment
+title: approved-premises.assessment.info-requested

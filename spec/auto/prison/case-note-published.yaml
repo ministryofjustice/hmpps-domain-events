@@ -1,0 +1,54 @@
+contentType: application/json
+name: prison.case-note.published
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        caseNoteId:
+          example: '47047647'
+          type: string
+        caseNoteType:
+          example: TRANSFER-FROMTOL
+          type: string
+        subType:
+          example: FROMTOL
+          type: string
+        type:
+          example: TRANSFER
+          type: string
+      type: object
+    description:
+      example: A prison case note has been created or amended
+      type: string
+    detailUrl:
+      example: https://dev.offender-case-notes.service.justice.gov.uk/case-notes/A7928DZ/47047647
+      type: string
+    eventType:
+      example: prison.case-note.published
+      type: string
+    occurredAt:
+      example: '2024-06-14T09:06:15+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A7928DZ
+                type: string
+            type: object
+          type: array
+      type: object
+    publishedAt:
+      example: '2024-06-14T09:06:15.621703706+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A prison case note has been created or amended
+title: prison.case-note.published

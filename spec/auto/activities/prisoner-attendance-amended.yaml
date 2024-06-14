@@ -1,0 +1,26 @@
+contentType: application/json
+name: activities.prisoner.attendance-amended
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        attendanceId:
+          example: 741988
+          type: integer
+      type: object
+    description:
+      example: A prisoner attendance has been amended in the activities management
+        service
+      type: string
+    eventType:
+      example: activities.prisoner.attendance-amended
+      type: string
+    occurredAt:
+      example: '2024-06-12T09:24:04.49962718'
+      type: string
+    version:
+      example: '1'
+      type: string
+  type: object
+summary: A prisoner attendance has been amended in the activities management service
+title: activities.prisoner.attendance-amended

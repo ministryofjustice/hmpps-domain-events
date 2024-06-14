@@ -1,0 +1,38 @@
+contentType: application/json
+name: prisoner-alerts.alert-type-created
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        alertCode:
+          example: "!@\xA3$%"
+          type: string
+        reason:
+          example: USER
+          type: string
+        source:
+          example: DPS
+          type: string
+        type:
+          example: alertCode
+          type: string
+        url:
+          example: "https://alerts-api-dev.hmpps.service.justice.gov.uk/alert-types/!@\xA3\
+            $%"
+          type: string
+      type: object
+    description:
+      example: An alert type has been created in the alerts reference data service
+      type: string
+    eventType:
+      example: prisoner-alerts.alert-type-created
+      type: string
+    occurredAt:
+      example: '2024-06-13T16:33:25.267732666+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An alert type has been created in the alerts reference data service
+title: prisoner-alerts.alert-type-created

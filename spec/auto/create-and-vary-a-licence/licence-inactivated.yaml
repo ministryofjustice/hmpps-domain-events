@@ -1,0 +1,50 @@
+contentType: application/json
+name: create-and-vary-a-licence.licence.inactivated
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        licenceId:
+          example: '118'
+          type: string
+      type: object
+    description:
+      example: Licence inactivated for Licence ID 118
+      type: string
+    detailUrl:
+      example: https://create-and-vary-a-licence-api-test2.hmpps.service.justice.gov.uk/public/licences/id/118
+      type: string
+    eventType:
+      example: create-and-vary-a-licence.licence.inactivated
+      type: string
+    occurredAt:
+      example: '2024-06-14T09:06:17.019894287+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X738925
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A7928DZ
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Licence inactivated for Licence ID 118
+title: create-and-vary-a-licence.licence.inactivated

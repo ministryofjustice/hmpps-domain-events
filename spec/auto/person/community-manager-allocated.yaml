@@ -1,0 +1,42 @@
+contentType: application/json
+name: person.community.manager.allocated
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        allocationId:
+          example: 6abd8aa1-7552-4f7c-bcec-be1eae8c4bf3
+          type: string
+      type: object
+    description:
+      example: Person allocated event
+      type: string
+    detailUrl:
+      example: https://hmpps-workload-dev.hmpps.service.justice.gov.uk/allocation/person/6abd8aa1-7552-4f7c-bcec-be1eae8c4bf3
+      type: string
+    eventType:
+      example: person.community.manager.allocated
+      type: string
+    occurredAt:
+      example: '2024-06-11T15:41:03.930816186+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X777519
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Person allocated event
+title: person.community.manager.allocated

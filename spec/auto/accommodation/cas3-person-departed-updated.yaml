@@ -1,0 +1,51 @@
+contentType: application/json
+name: accommodation.cas3.person.departed.updated
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId: applicationId
+        bookingId:
+          example: ee9b010c-ca67-4dbe-afab-606204ebccab
+          type: string
+      type: object
+    description:
+      example: Person has updated departure date of Transitional Accommodation premises
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/cas3/person-departure-updated/7cda9452-5ed7-4695-86ca-4b7877b7b23a
+      type: string
+    eventType:
+      example: accommodation.cas3.person.departed.updated
+      type: string
+    occurredAt:
+      example: '2024-05-18T00:00:00Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X371199
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A7779DY
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Person has updated departure date of Transitional Accommodation premises
+title: accommodation.cas3.person.departed.updated

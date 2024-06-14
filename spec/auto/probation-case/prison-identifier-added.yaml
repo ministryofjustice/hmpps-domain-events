@@ -1,0 +1,49 @@
+contentType: application/json
+name: probation-case.prison-identifier.added
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        bookingNumber:
+          example: 51132A
+          type: string
+      type: object
+    description:
+      example: A probation case has been matched with a booking in the prison system.
+        The prisoner and booking identifiers have been added to the probation case.
+      type: string
+    eventType:
+      example: probation-case.prison-identifier.added
+      type: string
+    occurredAt:
+      example: '2024-06-11T17:36:56.241562485+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X757129
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A1036EA
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A probation case has been matched with a booking in the prison system. The
+  prisoner and booking identifiers have been added to the probation case.
+title: probation-case.prison-identifier.added

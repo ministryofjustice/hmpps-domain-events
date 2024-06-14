@@ -1,0 +1,51 @@
+contentType: application/json
+name: approved-premises.application.submitted
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId:
+          example: ba0cbaec-f16b-4b9e-9054-9849002e0f01
+          type: string
+        bookingId: bookingId
+      type: object
+    description:
+      example: An application has been submitted for an Approved Premises placement
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/application-submitted/7d69269b-947e-4cf5-99fb-22197a97e2f7
+      type: string
+    eventType:
+      example: approved-premises.application.submitted
+      type: string
+    occurredAt:
+      example: '2024-06-10T13:52:22.86877228Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X371199
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A7779DY
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An application has been submitted for an Approved Premises placement
+title: approved-premises.application.submitted

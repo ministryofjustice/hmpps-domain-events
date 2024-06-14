@@ -1,0 +1,31 @@
+contentType: application/json
+name: location.inside.prison.amended
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        id:
+          example: 7df8b01b-741f-4feb-ad79-f0b48795b760
+          type: string
+        key:
+          example: CFI-BB
+          type: string
+        source:
+          example: NOMIS
+          type: string
+      type: object
+    description:
+      example: CFI-BB A location inside prison has been amended
+      type: string
+    eventType:
+      example: location.inside.prison.amended
+      type: string
+    occurredAt:
+      example: '2024-06-10T16:23:15.637137633+01:00'
+      type: string
+    version:
+      example: '1.0'
+      type: string
+  type: object
+summary: CFI-BB A location inside prison has been amended
+title: location.inside.prison.amended

@@ -1,0 +1,45 @@
+contentType: application/json
+name: pre-sentence.report.started
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        eventNumber:
+          example: '1'
+          type: string
+        reportId:
+          example: 4effa307-5e74-4a21-87db-a0915c879c5b
+          type: string
+      type: object
+    description:
+      example: A Pre-Sentence Report has been started
+      type: string
+    detailUrl:
+      example: https://pre-sentence-service-dev.hmpps.service.justice.gov.uk/api/v1/report/4effa307-5e74-4a21-87db-a0915c879c5b
+      type: string
+    eventType:
+      example: pre-sentence.report.started
+      type: string
+    occurredAt:
+      example: '2024-06-11T14:14:25.810Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X777446
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A Pre-Sentence Report has been started
+title: pre-sentence.report.started

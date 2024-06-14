@@ -1,0 +1,48 @@
+contentType: application/json
+name: prison-offender-events.prisoner.appointments-changed
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        action:
+          example: 'YES'
+          type: string
+        prisonId:
+          example: RSI
+          type: string
+        user:
+          example: MHALMA_GEN
+          type: string
+      type: object
+    description:
+      example: A prisoner's appointment has been changed
+      type: string
+    eventType:
+      example: prison-offender-events.prisoner.appointments-changed
+      type: string
+    occurredAt:
+      example: '2024-06-10T12:36:32+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: G3561UJ
+                type: string
+            type: object
+          type: array
+      type: object
+    publishedAt:
+      example: '2024-06-10T12:36:33.080448253+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A prisoner's appointment has been changed
+title: prison-offender-events.prisoner.appointments-changed

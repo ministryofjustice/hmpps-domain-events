@@ -1,0 +1,42 @@
+contentType: application/json
+name: event.manager.allocated
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        allocationId:
+          example: cffceaa1-c333-4c81-b4a0-00c66a4f37ea
+          type: string
+      type: object
+    description:
+      example: Event allocated event
+      type: string
+    detailUrl:
+      example: https://hmpps-workload-dev.hmpps.service.justice.gov.uk/allocation/event/cffceaa1-c333-4c81-b4a0-00c66a4f37ea
+      type: string
+    eventType:
+      example: event.manager.allocated
+      type: string
+    occurredAt:
+      example: '2024-06-14T08:55:44.092150863+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X747354
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Event allocated event
+title: event.manager.allocated

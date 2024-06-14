@@ -1,0 +1,52 @@
+contentType: application/json
+name: accommodation.cas3.person.arrived
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        applicationId: applicationId
+        bookingId:
+          example: ee9b010c-ca67-4dbe-afab-606204ebccab
+          type: string
+      type: object
+    description:
+      example: Someone has arrived at a Transitional Accommodation premises for their
+        booking
+      type: string
+    detailUrl:
+      example: https://approved-premises-api-dev.hmpps.service.justice.gov.uk/events/cas3/person-arrived/ac54c88e-8961-4cac-9a23-dbb7fa3fa6f0
+      type: string
+    eventType:
+      example: accommodation.cas3.person.arrived
+      type: string
+    occurredAt:
+      example: '2023-07-26T00:00:00Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X371199
+                type: string
+            type: object
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A7779DY
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: Someone has arrived at a Transitional Accommodation premises for their booking
+title: accommodation.cas3.person.arrived

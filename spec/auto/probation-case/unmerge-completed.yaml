@@ -1,0 +1,42 @@
+contentType: application/json
+name: probation-case.unmerge.completed
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        reactivatedCRN:
+          example: X334583
+          type: string
+        unmergedCRN:
+          example: X776371
+          type: string
+      type: object
+    description:
+      example: An unmerge has been completed on the probation case
+      type: string
+    eventType:
+      example: probation-case.unmerge.completed
+      type: string
+    occurredAt:
+      example: '2024-06-10T15:15:22.457512+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X776371
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An unmerge has been completed on the probation case
+title: probation-case.unmerge.completed
