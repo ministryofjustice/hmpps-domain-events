@@ -1,0 +1,17 @@
+name: incentives.levels.reordered
+title: Incentives - incentive levels has been re-ordered
+contentType: application/json
+payload:
+  type: object
+  properties:
+    version:
+      const: "1.0"
+    eventType:
+      const: incentives.levels.reordered
+    occurredAt:
+      type: string
+      format: date-time
+      example: 2023-12-05T12:34:56+00:00
+    description:
+      type: string
+      example: "Incentive levels have been re-ordered"

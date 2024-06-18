@@ -1,0 +1,28 @@
+name: incentives.iep-review.inserted
+title: Incentives - an incentive review was added
+contentType: application/json
+payload:
+  type: object
+  properties:
+    version:
+      const: "1.0"
+    eventType:
+      const: incentives.iep-review.inserted
+    occurredAt:
+      type: string
+      format: date-time
+      example: 2023-12-05T12:34:56+00:00
+    description:
+      type: string
+      example: "An IEP review has been added"
+    additionalInformation:
+      type: object
+      properties:
+        id:
+          description: Incentive review ID
+          type: integer
+          example: 1234567
+        nomsNumber:
+          description: Prisoner number
+          type: string
+          example: "A1111AA"
