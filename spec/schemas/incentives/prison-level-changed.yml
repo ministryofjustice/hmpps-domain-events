@@ -22,7 +22,7 @@ payload:
           description: Incentive level code
           type: string
           example: "STD"
-        incentiveLevel:
+        prisonId:
           description: Prison ID
           type: string
           example: "MDI"
