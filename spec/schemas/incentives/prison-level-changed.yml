@@ -1,0 +1,28 @@
+name: incentives.prison-level.changed
+title: Incentives - a prison's incentive level has been changed
+contentType: application/json
+payload:
+  type: object
+  properties:
+    version:
+      const: "1.0"
+    eventType:
+      const: incentives.prison-level.changed
+    occurredAt:
+      type: string
+      format: date-time
+      example: 2023-12-05T12:34:56+00:00
+    description:
+      type: string
+      example: "Incentive level (STD) in prison MDI has been updated"
+    additionalInformation:
+      type: object
+      properties:
+        incentiveLevel:
+          description: Incentive level code
+          type: string
+          example: "STD"
+        incentiveLevel:
+          description: Prison ID
+          type: string
+          example: "MDI"
