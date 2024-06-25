@@ -31,3 +31,17 @@ payload:
           description: Where the report was amended
           enum: [DPS, NOMIS]
           example: DPS
+        whatChanged:
+          description: The part of the report that changed
+          example: QUESTIONS
+          enum:
+            - ANYTHING
+            - BASIC_REPORT
+            - TYPE
+            - STATUS
+            - PRISONERS_INVOLVED
+            - STAFF_INVOLVED
+            - LOCATIONS
+            - EVIDENCE
+            - CORRECTION_REQUESTS
+            - QUESTIONS
