@@ -1,0 +1,39 @@
+contentType: application/json
+name: person.alerts.changed
+payload:
+  properties:
+    additionalInformation:
+      properties: { }
+      type: object
+    description:
+      example: The alerts for a given person have been updated in the alerts service
+      type: string
+    detailUrl:
+      example: https://alerts-api-dev.hmpps.service.justice.gov.uk/prisoner/A7779DY/alerts
+      type: string
+    eventType:
+      example: person.alerts.changed
+      type: string
+    occurredAt:
+      example: '2024-06-28T15:30:00Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+            - properties:
+                type:
+                  example: NOMS
+                  type: string
+                value:
+                  example: A7779DY
+                  type: string
+              type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: The alerts for a given person have changed
+title: person.alerts.changed
