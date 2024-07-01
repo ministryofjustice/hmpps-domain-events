@@ -9,7 +9,7 @@ payload:
       example: The alerts for a given person have been updated in the alerts service
       type: string
     detailUrl:
-      example: https://alerts-api-dev.hmpps.service.justice.gov.uk/prisoner/A7779DY/alerts
+      example: https://alerts-api-dev.hmpps.service.justice.gov.uk/prisoner/A7779DY/alerts - for more details about options see https://alerts-api-dev.hmpps.service.justice.gov.uk/swagger-ui/index.html#/prisoner-alerts-controller/retrievePrisonerAlerts
       type: string
     eventType:
       example: person.alerts.changed
@@ -35,5 +35,5 @@ payload:
       example: 1
       type: integer
   type: object
-summary: The alerts for a given person have changed
+summary: The alerts for a given person have changed. The detail url default will provide all the latest alerts for a prisoner. These can be filtered to only active alerts. Please see see https://alerts-api-dev.hmpps.service.justice.gov.uk/swagger-ui/index.html#/prisoner-alerts-controller/retrievePrisonerAlerts for full api spec.
 title: person.alerts.changed
