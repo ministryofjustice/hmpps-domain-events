@@ -1,0 +1,28 @@
+name: location.inside.prison.signed-op-cap.amended
+title: Locations – the signed operation capacity of the prison has changed
+contentType: application/json
+payload:
+  type: object
+  properties:
+    version:
+      const: "1.0"
+    eventType:
+      const: location.inside.prison.signed-op-cap-amended
+    occurredAt:
+      type: string
+      format: date-time
+      example: 2023-12-05T12:34:56+00:00
+    description:
+      type: string
+      example: "Signed Op-Cap changed for MDI to 786"
+    additionalInformation:
+      type: object
+      properties:
+        key:
+          description: Prison where change made
+          type: string
+          example: MDI
+        source:
+          description: The source of the change to signed op-cap
+          enum: [DPS]
+          example: DPS

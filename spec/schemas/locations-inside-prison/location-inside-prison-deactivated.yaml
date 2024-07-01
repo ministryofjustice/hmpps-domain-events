@@ -1,0 +1,33 @@
+name: location.inside.prison.deactivated
+title: Locations – a location inside prison has been de-activated
+contentType: application/json
+payload:
+  type: object
+  properties:
+    version:
+      const: "1.0"
+    eventType:
+      const: location.inside.prison.deactivated
+    occurredAt:
+      type: string
+      format: date-time
+      example: 2023-12-05T12:34:56+00:00
+    description:
+      type: string
+      example: "MDI-1-1-001 A location inside prison has been deactivated"
+    additionalInformation:
+      type: object
+      properties:
+        id:
+          description: Internal location identifier
+          type: string
+          format: uuid
+          example: 11111111-2222-3333-4444-555555555555
+        key:
+          description: Unique reference to the location
+          type: string
+          example: MDI-1-1-001
+        source:
+          description: Where the location was updated
+          enum: [DPS, NOMIS]
+          example: DPS
