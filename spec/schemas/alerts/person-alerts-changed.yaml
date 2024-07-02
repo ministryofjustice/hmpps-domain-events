@@ -15,7 +15,7 @@ payload:
       example: person.alerts.changed
       type: string
     occurredAt:
-      example: '2024-06-28T15:30:00Z'
+      example: '2024-07-02T16:26:36.890967112+01:00'
       type: string
     personReference:
       properties:
