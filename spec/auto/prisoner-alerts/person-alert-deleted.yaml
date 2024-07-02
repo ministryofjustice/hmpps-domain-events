@@ -1,0 +1,47 @@
+contentType: application/json
+name: person.alert.deleted
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        alertCode:
+          example: PEEP
+          type: string
+        alertUuid:
+          example: 6a0783ee-024e-4201-8e1f-3ead5fd2492a
+          type: string
+        source:
+          example: DPS
+          type: string
+    description:
+      example: An alert has been deleted in the alerts service
+      type: string
+    detailUrl:
+      example: https://alerts-api-dev.hmpps.service.justice.gov.uk/alerts/6a0783ee-024e-4201-8e1f-3ead5fd2492a
+      type: string
+    eventType:
+      example: person.alert.deleted
+      type: string
+    occurredAt:
+      example: '2024-07-02T16:26:36.890967112+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+            - properties:
+                type:
+                  example: NOMS
+                  type: string
+                value:
+                  example: A7779DY
+                  type: string
+              type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An alert has been deleted in the alerts service
+title: person.alert.deleted
