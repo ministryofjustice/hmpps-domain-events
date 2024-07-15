@@ -1,0 +1,74 @@
+contentType: application/json
+name: person.csip.record.created
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        recordUuid:
+          example: 9ef0e5ca-a5cc-4345-9cf3-02fa2e996a95
+          type: string
+        isRecordAffected:
+          example: false
+          type: boolean
+        isContributoryFactorAffected:
+          example: false
+          type: boolean
+        isSaferCustodyScreeningOutcomeAffected:
+          example: false
+          type: boolean
+        isInvestigationAffected:
+          example: false
+          type: boolean
+        isInterviewAffected:
+          example: false
+          type: boolean
+        isDecisionAndActionsAffected:
+          example: false
+          type: boolean
+        isPlanAffected:
+          example: false
+          type: boolean
+        isIdentifiedNeedAffected:
+          example: false
+          type: boolean
+        isReviewAffected:
+          example: false
+          type: boolean
+        isAttendeeAffected:
+          example: false
+          type: boolean
+        source:
+          example: DPS
+          type: string
+    description:
+      example: A CSIP record has been created in the CSIP service
+      type: string
+    detailUrl:
+      example: https://csip-api.hmpps.service.justice.gov.uk/csip-records/9ef0e5ca-a5cc-4345-9cf3-02fa2e996a95
+      type: string
+    eventType:
+      example: person.csip.record.created
+      type: string
+    occurredAt:
+      example: '2024-07-15T09:03:38.927167845+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+            - properties:
+                type:
+                  example: NOMS
+                  type: string
+                value:
+                  example: A7779DY
+                  type: string
+              type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A CSIP record has been created in the CSIP service
+title: person.csip.record.created
