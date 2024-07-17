@@ -18,8 +18,8 @@ payload:
     additionalInformation:
       type: object
       properties:
-        incidentNumber:
-          description: Human-readable incident report number
+        reportReference:
+          description: Human-readable incident report reference (NOMIS incident number)
           type: string
           example: "247314"
         id:
