@@ -1,11 +1,11 @@
 contentType: application/json
-name: person.csip.contributory-factor.created
+name: person.csip.identified-need.deleted
 payload:
   properties:
     additionalInformation:
       properties:
         entityUuid:
-          example: 0c27688c-47cb-43b3-89ee-facb6cdc5b1f
+          example: 893a4e2f-ddbb-4018-b29c-d1178c26cdf8
           type: string
         recordUuid:
           example: 9ef0e5ca-a5cc-4345-9cf3-02fa2e996a95
@@ -14,13 +14,13 @@ payload:
           example: DPS
           type: string
     description:
-      example: A contributory factor has been created in the CSIP service
+      example: An identified need record has been deleted in the CSIP service
       type: string
     detailUrl:
       example: https://csip-api.hmpps.service.justice.gov.uk/csip-records/9ef0e5ca-a5cc-4345-9cf3-02fa2e996a95
       type: string
     eventType:
-      example: person.csip.contributory-factor.created
+      example: person.csip.identified-need.deleted
       type: string
     occurredAt:
       example: '2024-07-15T09:03:38.927167845+01:00'
@@ -43,5 +43,5 @@ payload:
       example: 1
       type: integer
   type: object
-summary: A contributory factor has been created in the CSIP service
-title: person.csip.contributory-factor.created
+summary: An identified need record has been deleted in the CSIP service
+title: person.csip.identified-need.deleted

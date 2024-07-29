@@ -1,5 +1,5 @@
 contentType: application/json
-name: person.csip.contributory-factor.created
+name: person.csip.contributory-factor.deleted
 payload:
   properties:
     additionalInformation:
@@ -14,13 +14,13 @@ payload:
           example: DPS
           type: string
     description:
-      example: A contributory factor has been created in the CSIP service
+      example: A contributory factor has been deleted in the CSIP service
       type: string
     detailUrl:
       example: https://csip-api.hmpps.service.justice.gov.uk/csip-records/9ef0e5ca-a5cc-4345-9cf3-02fa2e996a95
       type: string
     eventType:
-      example: person.csip.contributory-factor.created
+      example: person.csip.contributory-factor.deleted
       type: string
     occurredAt:
       example: '2024-07-15T09:03:38.927167845+01:00'
@@ -43,5 +43,5 @@ payload:
       example: 1
       type: integer
   type: object
-summary: A contributory factor has been created in the CSIP service
-title: person.csip.contributory-factor.created
+summary: A contributory factor has been deleted in the CSIP service
+title: person.csip.contributory-factor.deleted

@@ -14,7 +14,7 @@ payload:
           example: DPS
           type: string
     description:
-      example: A Interview record has been created in the CSIP service
+      example: An interview record has been created in the CSIP service
       type: string
     detailUrl:
       example: https://csip-api.hmpps.service.justice.gov.uk/csip-records/9ef0e5ca-a5cc-4345-9cf3-02fa2e996a95
@@ -43,5 +43,5 @@ payload:
       example: 1
       type: integer
   type: object
-summary: A Interview record has been created in the CSIP service
+summary: An interview record has been created in the CSIP service
 title: person.csip.interview.created
