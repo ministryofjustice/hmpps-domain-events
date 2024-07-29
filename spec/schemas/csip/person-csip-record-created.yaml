@@ -7,36 +7,22 @@ payload:
         recordUuid:
           example: 9ef0e5ca-a5cc-4345-9cf3-02fa2e996a95
           type: string
-        isRecordAffected:
-          example: false
-          type: boolean
-        isContributoryFactorAffected:
-          example: false
-          type: boolean
-        isSaferCustodyScreeningOutcomeAffected:
-          example: false
-          type: boolean
-        isInvestigationAffected:
-          example: false
-          type: boolean
-        isInterviewAffected:
-          example: false
-          type: boolean
-        isDecisionAndActionsAffected:
-          example: false
-          type: boolean
-        isPlanAffected:
-          example: false
-          type: boolean
-        isIdentifiedNeedAffected:
-          example: false
-          type: boolean
-        isReviewAffected:
-          example: false
-          type: boolean
-        isAttendeeAffected:
-          example: false
-          type: boolean
+        affectedComponents:
+          type: array
+          items:
+            type: string
+            enum:
+              - Record
+              - Referral
+              - ContributoryFactor
+              - SaferCustodyScreeningOutcome
+              - Investigation
+              - Interview
+              - DecisionAndActions
+              - Plan
+              - IdentifiedNeed
+              - Review
+              - Attendee
         source:
           example: DPS
           type: string
