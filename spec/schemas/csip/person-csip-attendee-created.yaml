@@ -1,0 +1,47 @@
+contentType: application/json
+name: person.csip.attendee.created
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        entityUuid:
+          example: 893a4e2f-ddbb-4018-b29c-d1178c26cdf8
+          type: string
+        recordUuid:
+          example: 9ef0e5ca-a5cc-4345-9cf3-02fa2e996a95
+          type: string
+        source:
+          example: DPS
+          type: string
+    description:
+      example: An attendee record has been created in the CSIP service
+      type: string
+    detailUrl:
+      example: https://csip-api.hmpps.service.justice.gov.uk/csip-records/9ef0e5ca-a5cc-4345-9cf3-02fa2e996a95
+      type: string
+    eventType:
+      example: person.csip.attendee.created
+      type: string
+    occurredAt:
+      example: '2024-07-15T09:03:38.927167845+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+            - properties:
+                type:
+                  example: NOMS
+                  type: string
+                value:
+                  example: A7779DY
+                  type: string
+              type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An attendee record has been created in the CSIP service
+title: person.csip.attendee.created
