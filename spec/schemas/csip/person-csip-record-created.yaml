@@ -1,30 +1,11 @@
 contentType: application/json
-name: person.csip.record.created
+name: person.csip-record.created
 payload:
   properties:
     additionalInformation:
       properties:
         recordUuid:
           example: 9ef0e5ca-a5cc-4345-9cf3-02fa2e996a95
-          type: string
-        affectedComponents:
-          type: array
-          items:
-            type: string
-            enum:
-              - Record
-              - Referral
-              - ContributoryFactor
-              - SaferCustodyScreeningOutcome
-              - Investigation
-              - Interview
-              - DecisionAndActions
-              - Plan
-              - IdentifiedNeed
-              - Review
-              - Attendee
-        source:
-          example: DPS
           type: string
     description:
       example: A CSIP record has been created in the CSIP service
@@ -33,7 +14,7 @@ payload:
       example: https://csip-api.hmpps.service.justice.gov.uk/csip-records/9ef0e5ca-a5cc-4345-9cf3-02fa2e996a95
       type: string
     eventType:
-      example: person.csip.record.created
+      example: person.csip-record.created
       type: string
     occurredAt:
       example: '2024-07-15T09:03:38.927167845+01:00'
@@ -57,4 +38,4 @@ payload:
       type: integer
   type: object
 summary: A CSIP record has been created in the CSIP service
-title: person.csip.record.created
+title: person.csip-record.created
