@@ -1,0 +1,52 @@
+name: prison-recall.recommendation.management-oversight
+title: prison-recall.recommendation.management-oversight
+summary: A decision on whether to recall to custody has been made
+contentType: application/json
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        bookedBy:
+          properties:
+            username:
+              example: JoeBloggs
+              type: string
+          type: object
+        contactOutcome:
+          example: DECISION_NOT_TO_RECALL
+          type: string
+        recommendationUrl:
+          example: https://make-recall-decision-dev.hmpps.service.justice.gov.uk/cases/A123456/overview
+          type: string
+        referralId: referralId
+      type: object
+    description:
+      example: Management Oversight - Recall
+      type: string
+    detailUrl:
+      example: https://make-recall-decision-api-dev.hmpps.service.justice.gov.uk/managementOversight/A123456
+      type: string
+    eventType:
+      example: prison-recall.recommendation.management-oversight
+      type: string
+    occurredAt:
+      example: '2024-06-13T20:07:14.858Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: A123456
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
