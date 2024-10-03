@@ -1,0 +1,50 @@
+name: prison-recall.recommendation.consideration
+title: prison-recall.recommendation.consideration
+summary: Management Oversight - Consideration Rationale
+contentType: application/json
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        bookedBy:
+          properties:
+            username:
+              example: JoeBloggs
+              type: string
+          type: object
+        contactOutcome: contactOutcome
+        recommendationUrl:
+          example: https://make-recall-decision-dev.hmpps.service.justice.gov.uk/cases/A123456/overview
+          type: string
+        referralId: referralId
+      type: object
+    description:
+      example: Management Oversight - Consideration Rationale
+      type: string
+    detailUrl:
+      example: https://make-recall-decision-api-dev.hmpps.service.justice.gov.uk/recallConsiderationRationale/A123456
+      type: string
+    eventType:
+      example: prison-recall.recommendation.consideration
+      type: string
+    occurredAt:
+      example: '2024-06-07T14:25:24.490Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: A123456
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
