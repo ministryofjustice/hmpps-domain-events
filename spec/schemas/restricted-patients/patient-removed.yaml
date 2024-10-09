@@ -1,0 +1,42 @@
+name: restricted-patients.patient.removed
+title: restricted-patients.patient.removed
+summary: Prisoner no longer a restricted patient
+contentType: application/json
+payload:
+  type: object
+  properties:
+    additionalInformation:
+      type: object
+      properties:
+        prisonerNumber:
+          type: string
+          example: G1177GA
+    description:
+      type: string
+      example: Prisoner no longer a restricted patient
+    eventType:
+      type: string
+      example: restricted-patients.patient.removed
+    occurredAt:
+      type: string
+      example: '2024-10-09T17:44:58.254271493+01:00'
+    personReference:
+      type: object
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              properties:
+                type:
+                  type: string
+                  example: NOMS
+                value:
+                  type: string
+                  example: G1177GA
+    publishedAt:
+      type: string
+      example: '2024-10-09T17:44:58.254271493+01:00'
+    version:
+      type: integer
+      example: 1
