@@ -19,7 +19,9 @@ if __name__ == "__main__":
     message = lib.application_insights.single_domain_event(args.event)
 
     if args.json:
-        print(message)
+import json
+...
+        print(json.dumps(message))
     else:
         # Write an ASyncAPI YAML message based on the event
         print(lib.asyncapi.create_asyncapi_yaml(message))
