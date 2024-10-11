@@ -1,0 +1,51 @@
+name: prisoner-offender-search.prisoner.received
+title: prisoner-offender-search.prisoner.received
+summary: 'A prisoner has been received into a prison with reason: admission on new
+  charges'
+contentType: application/json
+payload:
+  type: object
+  properties:
+    additionalInformation:
+      type: object
+      properties:
+        nomsNumber:
+          type: string
+          example: G2899UJ
+        prisonId:
+          type: string
+          example: KMI
+        reason:
+          type: string
+          example: NEW_ADMISSION
+    description:
+      type: string
+      example: 'A prisoner has been received into a prison with reason: admission
+        on new charges'
+    detailUrl:
+      type: string
+      example: https://prisoner-search-dev.prison.service.justice.gov.uk/prisoner/G2899UJ
+    eventType:
+      type: string
+      example: prisoner-offender-search.prisoner.received
+    occurredAt:
+      type: string
+      example: '2024-10-10T09:52:18.8241261+01:00'
+    personReference:
+      type: object
+      properties:
+        identifiers:
+          type: array
+          items:
+          - type: object
+            properties:
+              type:
+                type: string
+                example: NOMS
+              value:
+                type: string
+                example: G2899UJ
+    version:
+      type: integer
+      example: 1
+
