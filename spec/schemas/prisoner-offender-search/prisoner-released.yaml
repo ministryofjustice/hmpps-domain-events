@@ -1,6 +1,9 @@
 name: prisoner-offender-search.prisoner.released
 title: prisoner-offender-search.prisoner.released
 summary: 'A prisoner has been released from a prison with reason: released from prison'
+description: |
+  This is when a prisoner is released from prison. Note that this event is also generated when a prisoner is added as a
+  restricted patient - so has been moved to a secure hospital and still serving a prison sentence.
 contentType: application/json
 payload:
   type: object
@@ -10,25 +13,42 @@ payload:
       properties:
         nomsNumber:
           type: string
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          description: The prison number of the prisoner
           example: A8473EA
         prisonId:
           type: string
+          description: Three character Prison code
+          pattern: '[A-Z]{3}'
           example: SWI
         reason:
           type: string
+          description: |
+            Reason for release of the prisoner. Possible values are:
+            <ul>
+              <li><b>TEMPORARY_ABSENCE_RELEASE</b> - released on temporary absence</li>
+              <li><b>RELEASED_TO_HOSPITAL</b> - released to a secure hospital</li>
+              <li><b>RELEASED</b> - released from prison</li>
+              <li><b>SENT_TO_COURT</b> - sent to court</li>
+              <li><b>TRANSFERRED</b> - transfer to another prison</li>
+            </ul>
+          enum: [TEMPORARY_ABSENCE_RELEASE, RELEASED_TO_HOSPITAL, RELEASED, SENT_TO_COURT, TRANSFERRED]
           example: RELEASED
     description:
       type: string
-      example: 'A prisoner has been released from a prison with reason: released from
-        prison'
+      enum: ['A prisoner has been released from a prison with reason: released from prison']
+      example: 'A prisoner has been released from a prison with reason: released from prison'
     detailUrl:
       type: string
+      description: A link to the prisoner in prisoner search
       example: https://prisoner-search-dev.prison.service.justice.gov.uk/prisoner/A8473EA
     eventType:
       type: string
+      enum: ['prisoner-offender-search.prisoner.released']
       example: prisoner-offender-search.prisoner.released
     occurredAt:
       type: string
+      description: The date and time the event occurred
       example: '2024-10-11T12:00:19.013138859+01:00'
     personReference:
       type: object
@@ -36,15 +56,18 @@ payload:
         identifiers:
           type: array
           items:
-          - type: object
-            properties:
-              type:
-                type: string
-                example: NOMS
-              value:
-                type: string
-                example: A8473EA
+            - type: object
+              properties:
+                type:
+                  type: string
+                  enum: [NOMS]
+                  example: NOMS
+                value:
+                  type: string
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  description: The prison number of the prisoner
+                  example: A8473EA
     version:
       type: integer
+      description: Version of this event message. Currently 1
       example: 1
-

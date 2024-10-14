@@ -1,6 +1,9 @@
 name: prisoner-offender-search.prisoner.updated
 title: prisoner-offender-search.prisoner.updated
 summary: A prisoner record has been updated
+description: |
+  This is when a prisoner index record has been updated. Note that this means that one of the fields in the prisoner
+  index record has changed. No event will be generated if changes are made to non-indexed fields on the prisoner.
 contentType: application/json
 payload:
   type: object
@@ -10,23 +13,44 @@ payload:
       properties:
         categoriesChanged:
           type: array
+          description: |
+            Array of enum - category of change for the prisoner. This can be multiple categories, where each category is
+            one of:
+            <ul>
+              <li><b>IDENTIFIERS</b> Main identifiers have changed, so one of pncNumber, croNumber, bookingId, bookNumber for the prisoner</li>
+              <li><b>PERSONAL_DETAILS</b> Personal details e.g. first name, last name, aliases have changed</li>
+              <li><b>ALERTS</b> One of the prisoner's alerts has changed</li>
+              <li><b>STATUS</b> The status of the prisoner has changed, so one of status, inOutStatus, csra, category, legalStatus, imprisonmentStatus, imprisonmentStatusDescription, recall</li>
+              <li><b>LOCATION</b> The cell or prison has changed, so one of lastMovementTypeCode, lastMovementReasonCode, prisonId, lastPrisonId, prisonName, cellLocation, locationDescription</li>
+              <li><b>SENTENCE</b> Any sentence information or sentence dates have changed</li>
+              <li><b>RESTRICTED_PATIENT</b> Restricted patient information has changed, so restrictedPatient, supportingPrisonId, dischargedHospitalId, dischargedHospitalDescription, dischargeDate</li>
+              <li><b>INCENTIVE_LEVEL</b> The current incentive has changed</li>
+              <li><b>PHYSICAL_DETAILS</b> Physical details has changed, so heightCentimetres, weightKilograms, hairColour, rightEyeColour, leftEyeColour, facialHair, shapeOfFace, build, shoeSize, tattoos, scars, marks</li>
+            </ul>
           items:
-          - type: string
-            example: SENTENCE
+            - type: string
+              enum: [IDENTIFIERS, PERSONAL_DETAILS, ALERTS, STATUS, LOCATION, SENTENCE, RESTRICTED_PATIENT, INCENTIVE_LEVEL, PHYSICAL_DETAILS]
+              example: SENTENCE
         nomsNumber:
           type: string
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          description: The prison number of the prisoner
           example: A0260DZ
     description:
       type: string
+      enum: [A prisoner record has been updated]
       example: A prisoner record has been updated
     detailUrl:
       type: string
+      description: A link to the prisoner in prisoner search
       example: https://prisoner-search-dev.prison.service.justice.gov.uk/prisoner/A0260DZ
     eventType:
       type: string
+      enum: [prisoner-offender-search.prisoner.updated]
       example: prisoner-offender-search.prisoner.updated
     occurredAt:
       type: string
+      description: The date and time the event occurred
       example: '2024-10-11T12:21:26.399052029+01:00'
     personReference:
       type: object
@@ -34,15 +58,18 @@ payload:
         identifiers:
           type: array
           items:
-          - type: object
-            properties:
-              type:
-                type: string
-                example: NOMS
-              value:
-                type: string
-                example: A0260DZ
+            - type: object
+              properties:
+                type:
+                  type: string
+                  enum: [NOMS]
+                  example: NOMS
+                value:
+                  type: string
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  description: The prison number of the prisoner
+                  example: A8473EA
     version:
       type: integer
+      description: Version of this event message. Currently 1
       example: 1
-

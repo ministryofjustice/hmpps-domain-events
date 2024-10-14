@@ -1,6 +1,9 @@
 name: restricted-patients.patient.removed
 title: restricted-patients.patient.removed
 summary: Prisoner no longer a restricted patient
+description: |
+  The prisoner has been removed as a restricted patient. This means that the prisoner is no longer serving their
+  sentence in a secure hospital.
 contentType: application/json
 payload:
   type: object
@@ -10,15 +13,20 @@ payload:
       properties:
         prisonerNumber:
           type: string
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          description: The prison number of the prisoner
           example: G1177GA
     description:
       type: string
+      enum: ["Prisoner no longer a restricted patient"]
       example: Prisoner no longer a restricted patient
     eventType:
       type: string
+      enum: ["restricted-patients.patient.removed"]
       example: restricted-patients.patient.removed
     occurredAt:
       type: string
+      description: The date and time the event occurred
       example: '2024-10-09T17:44:58.254271493+01:00'
     personReference:
       type: object
@@ -30,13 +38,18 @@ payload:
               properties:
                 type:
                   type: string
+                  enum: [NOMS]
                   example: NOMS
                 value:
                   type: string
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  description: The prison number of the prisoner
                   example: G1177GA
     publishedAt:
       type: string
+      description: The date and time the event was published
       example: '2024-10-09T17:44:58.254271493+01:00'
     version:
       type: integer
+      description: Version of this event message. Currently 1
       example: 1

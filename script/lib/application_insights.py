@@ -24,6 +24,8 @@ def single_domain_event(event_type):
          | where cloud_RoleName in ('hmpps-domain-event-logger')
          | where name == '{event_type}'
          | where timestamp between((ago(7d)) .. now())
+         | order by timestamp desc
+         | limit 1
     """
 
     full_response = ai_request(query)
