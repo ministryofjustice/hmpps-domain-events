@@ -1,6 +1,7 @@
 name: prisoner-offender-search.prisoner.alerts-updated
 title: prisoner-offender-search.prisoner.alerts-updated
-summary: 'A prisoner had their alerts updated, added: 1, removed: 0'
+summary: A prisoner had their alerts updated
+description: This is when a prisoner alerts have altered.
 contentType: application/json
 payload:
   type: object
@@ -10,31 +11,40 @@ payload:
       properties:
         alertsAdded:
           type: array
+          description: Array of alerts that have been added for the prisoner.
           items:
-          - type: string
-            example: CSIP
+            - type: string
+              example: CSIP
         alertsRemoved:
           type: array
+          description: Array of alerts that have been removed from the prisoner.
           items:
-          - type: string
-            example: CSIP
+            - type: string
+              example: CSIP
         bookingId:
-          type: string
-          example: '1205032'
+          type: integer
+          description: NOMIS booking id for the prisoner
+          example: 1205032
         nomsNumber:
           type: string
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          description: The prison number of the prisoner
           example: A1350DZ
     description:
       type: string
+      description: Information on how many alerts have been updated
       example: 'A prisoner had their alerts updated, added: 1, removed: 0'
     detailUrl:
       type: string
+      description: A link to the prisoner in prisoner search
       example: https://prisoner-search-dev.prison.service.justice.gov.uk/prisoner/A1350DZ
     eventType:
       type: string
+      enum: ['prisoner-offender-search.prisoner.alerts-updated']
       example: prisoner-offender-search.prisoner.alerts-updated
     occurredAt:
       type: string
+      description: The date and time the event occurred
       example: '2024-10-11T15:22:59.105827778+01:00'
     personReference:
       type: object
@@ -42,15 +52,18 @@ payload:
         identifiers:
           type: array
           items:
-          - type: object
-            properties:
-              type:
-                type: string
-                example: NOMS
-              value:
-                type: string
-                example: A1350DZ
+            - type: object
+              properties:
+                type:
+                  type: string
+                  enum: [NOMS]
+                  example: NOMS
+                value:
+                  type: string
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  description: The prison number of the prisoner
+                  example: A1350DZ
     version:
       type: integer
+      description: Version of this event message. Currently 1
       example: 1
-
