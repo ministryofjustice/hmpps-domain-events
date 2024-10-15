@@ -1,0 +1,100 @@
+name: prison-offender-events.prisoner.restriction.changed
+title: prison-offender-events.prisoner.restriction.changed
+summary: A prisoner restriction record has changed
+description: |
+  This event is raised when a prisoner visits restriction is created/updated/deleted.
+contentType: application/json
+payload:
+  type: object
+  required: [additionalInformation, description, eventType, occurredAt, personReference, publishedAt, version]
+  properties:
+    additionalInformation:
+      type: object
+      required: [authorisedById, bookingId, effectiveDate, enteredById, nomsNumber, offenderRestrictionId, restrictionType]
+      properties:
+        authorisedById:
+          type: integer
+          description: NOMIS staff id of authoriser
+          example: 487279
+        bookingId:
+          type: integer
+          description: NOMIS booking id of the prisoner
+          example: 1200993
+        effectiveDate:
+          type: string
+          description: Start date of restriction
+          format: date
+          example: '2024-10-02'
+        expiryDate:
+          type: string
+          description: Optional end date
+          format: date
+          example: '2025-09-03'
+        enteredById:
+          type: integer
+          description: NOMIS staff id of creator
+          example: 487759
+        nomsNumber:
+          type: string
+          description: Prison number of the prisoner
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          example: G4793VF
+        offenderRestrictionId:
+          type: integer
+          description: NOMIS id of the restriction record
+          example: 196081
+        restrictionType:
+          type: string
+          description: |
+            enum (from domain 'VST_RST_TYPE') -
+            <ul>
+              <li><b>ACC</b> access requirements</li>
+              <li><b>BAN</b> banned</li>
+              <li><b>CCTV</b> CCTV</li>
+              <li><b>CHILD</b> child visitors to be vetted</li>
+              <li><b>CLOSED</b> closed</li>
+              <li><b>DIHCON</b> disability health concerns</li>
+              <li><b>NONCON</b> non-contact visit</li>
+              <li><b>PREINF</b> previous info</li>
+              <li><b>RESTRICT</b> restricted</li>
+            </ul>
+          enum: [ACC, BAN, CCTV, CHILD, CLOSED, DIHCON, NONCON, PREINF, RESTRICT]
+          example: PREINF
+    description:
+      type: string
+      const: A prisoner restriction record has changed
+    eventType:
+      type: string
+      const: prison-offender-events.prisoner.restriction.changed
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2024-10-02T11:58:01+01:00'
+    personReference:
+      type: object
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  const: NOMS
+                value:
+                  type: string
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  description: The prison number of the prisoner
+                  example: G4793VF
+    publishedAt:
+      type: string
+      description: The date and time the event was published
+      format: date-time
+      example: '2024-10-02T11:58:01.462269944+01:00'
+    version:
+      type: integer
+      description: Version of this event message. Currently 1
+      example: 1

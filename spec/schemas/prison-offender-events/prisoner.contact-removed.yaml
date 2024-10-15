@@ -1,0 +1,78 @@
+name: prison-offender-events.prisoner.contact-removed
+title: prison-offender-events.prisoner.contact-removed
+summary: A contact for a prisoner has been removed
+description: |
+  This event is raised when a person has been removed as contact to a prisoner.
+  Only the relationship is removed not the actual person.
+contentType: application/json
+payload:
+  type: object
+  required: [additionalInformation, description, eventType, occurredAt, personReference, publishedAt, version]
+  properties:
+    additionalInformation:
+      type: object
+      required: [approvedVisitor, bookingId, contactId, nomsNumber, personId, username]
+      properties:
+        approvedVisitor:
+          type: boolean
+          description: Flag to indicate if the contact was an approved visitor at the point the event was triggered
+          example: false
+        bookingId:
+          type: integer
+          description: ID of the booking record in NOMIS that contains the contact
+          example: 1221664
+        contactId:
+          type: integer
+          description: ID of the contact record in NOMIS that contains information about the relationship, e.g. social, official, brother etc
+          example: 7551237
+        nomsNumber:
+          type: string
+          description: Prison number of the prisoner that has the contact
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          example: A8511EA
+        personId:
+          type: integer
+          description: ID of the person record in NOMIS that contains information about the person, e.g. name, date of birth etc
+          example: 4729590
+        username:
+          type: string
+          description: NOMIS user that made the change
+          example: AMARKE_GEN
+    description:
+      type: string
+      const: A contact for a prisoner has been removed
+    eventType:
+      type: string
+      const: prison-offender-events.prisoner.contact-removed
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2024-10-14T10:38:49+01:00'
+    personReference:
+      type: object
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  const: NOMS
+                value:
+                  type: string
+                  description: Prison number of the prisoner that has the contact
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  example: A8511EA
+    publishedAt:
+      type: string
+      description: The date and time the event was published
+      format: date-time
+      example: '2024-10-14T10:38:49.659610144+01:00'
+    version:
+      type: integer
+      description: Version of this event message. Currently 1
+      example: 1

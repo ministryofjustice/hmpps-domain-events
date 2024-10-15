@@ -1,0 +1,103 @@
+name: prison-offender-events.prisoner.person-restriction.deleted
+title: prison-offender-events.prisoner.person-restriction.deleted
+summary: A prisoner person restriction record has been deleted
+description: This event is raised when a global visitor restriction is deleted.
+contentType: application/json
+payload:
+  type: object
+  required: [additionalInformation, description, eventType, occurredAt, personReference, publishedAt, version]
+  properties:
+    additionalInformation:
+      type: object
+      required: [contactPersonId, effectiveDate, enteredById, nomsNumber, offenderPersonRestrictionId, personId, restrictionType]
+      properties:
+        contactPersonId:
+          type: integer
+          description: NOMIS contact id of the visitor
+          example: 7551236
+        effectiveDate:
+          type: string
+          description: Start date of restriction
+          format: date
+          example: '2024-01-01'
+        expiryDate:
+          type: string
+          description: Optional end date
+          format: date
+          example: '2025-09-03'
+        enteredById:
+          type: integer
+          description: NOMIS staff id of creator
+          example: 485887
+        nomsNumber:
+          type: string
+          description: Prison number of the prisoner that has the contact
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          example: A8511EA
+        offenderPersonRestrictionId:
+          type: integer
+          description: NOMIS id of the restriction record
+          example: 71882
+        personId:
+          type: integer
+          description: NOMIS person id of the restriction record
+          example: 4730072
+        authorisedById:
+          type: integer
+          description: NOMIS staff id of authoriser
+          example: 4730072
+        restrictionType:
+          type: string
+          description: |
+            enum (from domain 'VST_RST_TYPE') -
+            <ul>
+              <li><b>ACC</b> access requirements</li>
+              <li><b>BAN</b> banned</li>
+              <li><b>CCTV</b> CCTV</li>
+              <li><b>CHILD</b> child visitors to be vetted</li>
+              <li><b>CLOSED</b> closed</li>
+              <li><b>DIHCON</b> disability health concerns</li>
+              <li><b>NONCON</b> non-contact visit</li>
+              <li><b>PREINF</b> previous info</li>
+              <li><b>RESTRICT</b> restricted</li>
+            </ul>
+          enum: [ACC, BAN, CCTV, CHILD, CLOSED, DIHCON, NONCON, PREINF, RESTRICT]
+          example: DIHCON
+    description:
+      type: string
+      example: A prisoner person restriction record has been deleted
+    eventType:
+      type: string
+      example: prison-offender-events.prisoner.person-restriction.deleted
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2024-10-14T10:39:18+01:00'
+    personReference:
+      type: object
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  const: NOMS
+                value:
+                  type: string
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  description: The prison number of the prisoner
+                  example: A8511EA
+    publishedAt:
+      type: string
+      description: The date and time the event was published
+      format: date-time
+      example: '2024-10-14T10:39:18.847180189+01:00'
+    version:
+      type: integer
+      description: Version of this event message. Currently 1
+      example: 1

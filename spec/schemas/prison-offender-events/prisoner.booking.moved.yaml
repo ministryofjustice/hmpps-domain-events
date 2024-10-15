@@ -1,0 +1,68 @@
+name: prison-offender-events.prisoner.booking.moved
+title: prison-offender-events.prisoner.booking.moved
+summary: A NOMIS booking has moved between prisoners
+description: |
+  This is raised when a NOMIS booking is moved from one prisoner to a different prisoner. In NOMIS most details are
+  held at booking level rather than prisoner level e.g. height, weight so it is important to listen to this event as
+  well as to prison-offender-events.prisoner.merged
+contentType: application/json
+payload:
+  type: object
+  required: [additionalInformation, description, eventType, occurredAt, personReference, publishedAt, version]
+  properties:
+    additionalInformation:
+      type: object
+      required: [bookingId, movedFromNomsNumber, movedToNomsNumber]
+      properties:
+        bookingId:
+          type: integer
+          description: NOMIS booking id for the prisoner
+          example: 1221642
+        movedFromNomsNumber:
+          type: string
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          description: Prison number of the prisoner (this will be old prisoner record that the booking was held against)
+          example: A8490EA
+        movedToNomsNumber:
+          type: string
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          description: Prison number of the prisoner (this will be prisoner record that now holds the booking)
+          example: A8491EA
+    description:
+      type: string
+      const: a NOMIS booking has moved between prisoners
+    eventType:
+      type: string
+      const: prison-offender-events.prisoner.booking.moved
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2024-10-11T16:39:45+01:00'
+    personReference:
+      type: object
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  const: NOMS
+                value:
+                  type: string
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  description: The prison number of the prisoner
+                  example: A8491EA
+    publishedAt:
+      type: string
+      description: The date and time the event was published
+      format: date-time
+      example: '2024-10-11T16:39:46.084397661+01:00'
+    version:
+      type: integer
+      description: Version of this event message. Currently 1
+      example: 1
