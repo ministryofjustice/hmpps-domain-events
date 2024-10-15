@@ -1,0 +1,67 @@
+name: prison-offender-events.prisoner.cell.move
+title: prison-offender-events.prisoner.cell.move
+summary: A prisoner has been moved to a different cell
+contentType: application/json
+payload:
+  type: object
+  required: [additionalInformation, description, eventType, occurredAt, personReference, publishedAt, version]
+  properties:
+    additionalInformation:
+      type: object
+      required: [bedAssignmentSeq, bookingId, livingUnitId, nomsNumber]
+      properties:
+        bedAssignmentSeq:
+          type: string
+          description: Sequence number for the bed assignment in NOMIS
+          example: 2
+        bookingId:
+          type: string
+          description: ID of the booking record in NOMIS
+          example: 1221666
+        livingUnitId:
+          type: string
+          description: ID of the living unit in NOMIS
+          example: 4088
+        nomsNumber:
+          type: string
+          description: Prison number of the prisoner
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          example: A8513EA
+    description:
+      type: string
+      const: A prisoner has been moved to a different cell
+    eventType:
+      type: string
+      const: prison-offender-events.prisoner.cell.move
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2024-10-14T15:08:51+01:00'
+    personReference:
+      type: object
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  const: NOMS
+                value:
+                  type: string
+                  description: Prison number of the prisoner
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  example: A8513EA
+    publishedAt:
+      type: string
+      description: The date and time the event was published
+      format: date-time
+      example: '2024-10-14T15:08:51.872169961+01:00'
+    version:
+      type: integer
+      description: Version of this event message. Currently 1
+      example: 1

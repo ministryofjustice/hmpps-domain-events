@@ -1,0 +1,104 @@
+name: prison-offender-events.prisoner.received
+title: prison-offender-events.prisoner.received
+summary: A prisoner has been received into prison
+description: |
+  This event is raised when a prisoner is received to prison, this may be due to remand, a conviction or a recall from a
+  broken licence. Also included are returns from temporary absences and transfers.
+  We would recommend consumers to ensure their service is idempotent, there are scenarios where multiple events maybe
+  raised for same receive.
+contentType: application/json
+payload:
+  type: object
+  required: [additionalInformation, description, eventType, occurredAt, personReference, publishedAt, version]
+  properties:
+    additionalInformation:
+      type: object
+      required: [currentLocation, currentPrisonStatus, details, nomisMovementReasonCode, nomsNumber, prisonId, reason]
+      properties:
+        currentLocation:
+          type: string
+          description: |
+            enum  - indicates if prisoner is in or out of prison
+            <ul>
+              <li><b>IN_PRISON</b> prisoner in a prison</li>
+              <li><b>OUTSIDE_PRISON</b> prisoner no longer in a prison</li>
+              <li><b>BEING_TRANSFERRED</b> prisoner is being transferred</li>
+            </ul>
+          enum: [IN_PRISON, OUTSIDE_PRISON, BEING_TRANSFERRED]
+          example: IN_PRISON
+        currentPrisonStatus:
+          type: string
+          description: |
+            enum  - indicates if prisoner is still actively cared for by a prison, and alias for ACTIVE/INACTION
+            <ul>
+              <li><b>UNDER_PRISON_CARE</b> even if the prison is out of prison they are still attached to a prison and has not been discharged</li>
+              <li><b>NOT_UNDER_PRISON_CARE</b> prisoner has been discharged from prison</li>
+            </ul>
+          enum: [UNDER_PRISON_CARE, NOT_UNDER_PRISON_CARE]
+          example: UNDER_PRISON_CARE
+        details:
+          type: string
+          description: Further human readable information about the reason. The contents is developer focused and not to be relied on.
+          example: ACTIVE IN:ADM-24
+        nomisMovementReasonCode:
+          type: string
+          description: |
+            The reason code for the last movement. Since this is the literal NOMIS reference data that can change
+            clients should be cautious of tightly integrating with this value. MOVE_RSN is the reference data domain in NOMIS
+          example: '24'
+        nomsNumber:
+          type: string
+          description: Prison number of the prisoner
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          example: A8513EA
+        prisonId:
+          type: string
+          example: SWI
+        reason:
+          type: string
+          description: |
+            enum - reason for the receive. Will be one of these values below. It has been observed that administration mistakes in NOMIS can cause the reason for RECALL and CONVICTED to be not always be accurate.
+            <ul>
+              <li><b>ADMISSION</b> prisoner is entering prison due to a new court order or recall</li>
+              <li><b>TEMPORARY_ABSENCE_RETURN</b> prisoner is returning from temporary absence e.g. day release</li>
+              <li><b>RETURN_FROM_COURT</b> prisoner is returning from court</li>
+              <li><b>TRANSFERRED</b> prisoner has been transferred from another prison</li>
+            </ul>
+          enum: [ADMISSION, TEMPORARY_ABSENCE_RETURN, RETURN_FROM_COURT, TRANSFERRED]
+          example: ADMISSION
+    description:
+      type: string
+      const: A prisoner has been received into prison
+    eventType:
+      type: string
+      const: prison-offender-events.prisoner.received
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2024-10-14T15:08:51+01:00'
+    personReference:
+      type: object
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  const: NOMS
+                value:
+                  type: string
+                  example: A8513EA
+    publishedAt:
+      type: string
+      description: The date and time the event was published
+      format: date-time
+      example: '2024-10-14T15:09:52.000478552+01:00'
+    version:
+      type: integer
+      description: Version of this event message. Currently 1
+      example: 1

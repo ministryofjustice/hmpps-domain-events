@@ -65,10 +65,10 @@ payload:
           example: DIHCON
     description:
       type: string
-      example: A prisoner person restriction record has been created or updated
+      const: A prisoner person restriction record has been created or updated
     eventType:
       type: string
-      example: prison-offender-events.prisoner.person-restriction.upserted
+      const: prison-offender-events.prisoner.person-restriction.upserted
     occurredAt:
       type: string
       description: The date and time the event occurred
