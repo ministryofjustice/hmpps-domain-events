@@ -1,0 +1,72 @@
+name: prison-offender-events.prisoner.merged
+title: prison-offender-events.prisoner.merged
+summary: A prisoner has been merged
+description: |
+  This is raised when a prisoner is merged into an exists prisoner record. This will mean that the prisoner will be now
+  attached to the original NOMS (prisoner) number and the new one removed from NOMIS
+contentType: application/json
+payload:
+  type: object
+  required: [additionalInformation, description, eventType, occurredAt, personReference, publishedAt, version]
+  properties:
+    additionalInformation:
+      type: object
+      required: [bookingId, nomsNumber, reason, removedNomsNumber]
+      properties:
+        bookingId:
+          type: integer
+          description: NOMIS booking id for the prisoner
+          example: 1221664
+        nomsNumber:
+          type: string
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          description: Prison number of the prisoner (this will be the value that the prisoner record now holds)
+          example: A8510EA
+        reason:
+          type: string
+          description: Indicates the prisoner records have been merged
+          const: MERGE
+        removedNomsNumber:
+          type: string
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          description: Prison number that was MERGED into nomsNumber and then removed
+          example: A8511EA
+    description:
+      type: string
+      description: Information about the merge
+      example: A prisoner has been merged from A8510EA to A8511EA
+    eventType:
+      type: string
+      const: prison-offender-events.prisoner.merged
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2024-10-14T10:40:37+01:00'
+    personReference:
+      type: object
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  const: NOMS
+                value:
+                  type: string
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  description: The prison number of the prisoner
+                  example: A8510EA
+    publishedAt:
+      type: string
+      description: The date and time the event was published
+      format: date-time
+      example: '2024-10-14T10:40:38.038552562+01:00'
+    version:
+      type: integer
+      description: Version of this event message. Currently 1
+      example: 1

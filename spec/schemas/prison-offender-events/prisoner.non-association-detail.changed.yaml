@@ -1,0 +1,119 @@
+name: prison-offender-events.prisoner.non-association-detail.changed
+title: prison-offender-events.prisoner.non-association-detail.changed
+summary: A prisoner non-association detail record has changed
+description: |
+  This event is raised when a prisoner non-association is created/updated/deleted.
+  These events occur in pairs because the non-association is created both ways round.
+contentType: application/json
+payload:
+  type: object
+  required: [additionalInformation, description, eventType, occurredAt, personReference, publishedAt, version]
+  properties:
+    additionalInformation:
+      type: object
+      required: [authorisedBy, bookingId, effectiveDate, nomsNumber, nonAssociationBookingId, nonAssociationNomsNumber, nonAssociationType, reasonCode]
+      properties:
+        authorisedBy:
+          type: string
+          description: Free text authorising entity
+          example: CHRISK
+        bookingId:
+          type: integer
+          description: NOMIS booking id of the first prisoner
+          example: 156217
+        effectiveDate:
+          type: string
+          description: Start date of non-association
+          format: date
+          example: '2024-09-17'
+        expiryDate:
+          type: string
+          description: Optional end date
+          format: date
+          example: '2024-09-17'
+        nomsNumber:
+          type: string
+          description: NOMS number of the first prisoner
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          example: G5932GL
+        nonAssociationBookingId:
+          type: integer
+          description: NOMIS booking id of the second prisoner
+          example: 1186507
+        nonAssociationNomsNumber:
+          type: string
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          description: NOMS number of the second prisoner
+          example: G8934VQ
+        nonAssociationType:
+          type: string
+          description: |
+            enum -
+            <ul>
+              <li><b>CELL</b> indicates the prisoner should not be located in the same cell</li>
+              <li><b>WING</b> indicates the prisoner should not be located on the same wing</li>
+              <li><b>LANDING</b> indicates the prisoner should not be located on the same landing</li>
+            </ul>
+          enum: [CELL, WING, LANDING]
+          example: CELL
+        reasonCode:
+          type: string
+          description: |
+            enum -
+            <ul>
+              <li><b>BUL</b> anti-bullying strategy</li>
+              <li><b>PER</b> perpetrator</li>
+              <li><b>RIV</b> rival gang</li>
+              <li><b>VIC</b> victim</li>
+            </ul>
+          enum: [BUL, PER, RIV, VIC]
+          example: RIV
+        typeSeq:
+          type: integer
+          description: not used
+          example: 1
+        levelCode:
+          type: string
+          description: not used
+        comment:
+          type: string
+          description: Optional comment
+          example: Some comment on the non-association
+    description:
+      type: string
+      const: A prisoner non-association detail record has changed
+    eventType:
+      type: string
+      const: prison-offender-events.prisoner.non-association-detail.changed
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2024-09-17T11:38:10+01:00'
+    personReference:
+      type: object
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  const: NOMS
+                value:
+                  type: string
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  description: The prison number of the prisoner
+                  example: G5932GL
+    publishedAt:
+      type: string
+      description: The date and time the event was published
+      format: date-time
+      example: '2024-09-17T11:38:10.767383738+01:00'
+    version:
+      type: integer
+      description: Version of this event message. Currently 1
+      example: 1
