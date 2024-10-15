@@ -22,11 +22,11 @@ payload:
           format: date
           example: '2025-09-03'
         enteredById:
-          type: integer
+          type: string
           description: NOMIS staff id of creator
           example: 487759
         personId:
-          type: integer
+          type: string
           description: NOMIS person id of the visitor
           example: 4729510
         restrictionType:
@@ -47,7 +47,7 @@ payload:
           enum: [ACC, BAN, CCTV, CHILD, CLOSED, DIHCON, NONCON, PREINF, RESTRICT]
           example: NONCON
         visitorRestrictionId:
-          type: integer
+          type: string
           description: NOMIS id of the restriction record
           example: 13560
     description:

@@ -18,7 +18,7 @@ payload:
           description: Free text authorising entity
           example: CHRISK
         bookingId:
-          type: integer
+          type: string
           description: NOMIS booking id of the first prisoner
           example: 156217
         effectiveDate:
@@ -37,7 +37,7 @@ payload:
           pattern: '[A-Z][0-9]{4}[A-Z]{2}'
           example: G5932GL
         nonAssociationBookingId:
-          type: integer
+          type: string
           description: NOMIS booking id of the second prisoner
           example: 1186507
         nonAssociationNomsNumber:
@@ -69,7 +69,7 @@ payload:
           enum: [BUL, PER, RIV, VIC]
           example: RIV
         typeSeq:
-          type: integer
+          type: string
           description: not used
           example: 1
         levelCode:

@@ -14,15 +14,15 @@ payload:
       required: [approvedVisitor, bookingId, contactId, nomsNumber, personId, username]
       properties:
         approvedVisitor:
-          type: boolean
+          type: string
           description: Flag to indicate if the contact was an approved visitor at the point the event was triggered
           example: false
         bookingId:
-          type: integer
+          type: string
           description: ID of the booking record in NOMIS that contains the contact
           example: 1221664
         contactId:
-          type: integer
+          type: string
           description: ID of the contact record in NOMIS that contains information about the relationship, e.g. social, official, brother etc
           example: 7551237
         nomsNumber:
@@ -31,7 +31,7 @@ payload:
           pattern: '[A-Z][0-9]{4}[A-Z]{2}'
           example: A8511EA
         personId:
-          type: integer
+          type: string
           description: ID of the person record in NOMIS that contains information about the person, e.g. name, date of birth etc
           example: 4729590
         username:
