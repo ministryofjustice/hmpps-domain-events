@@ -11,7 +11,7 @@ payload:
       required: [bookingId]
       properties:
         bookingId:
-          type: integer
+          type: string
           description: ID of the booking record in NOMIS
           example: 1221666
     description:

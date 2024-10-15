@@ -13,11 +13,11 @@ payload:
       required: [authorisedById, bookingId, effectiveDate, enteredById, nomsNumber, offenderRestrictionId, restrictionType]
       properties:
         authorisedById:
-          type: integer
+          type: string
           description: NOMIS staff id of authoriser
           example: 487279
         bookingId:
-          type: integer
+          type: string
           description: NOMIS booking id of the prisoner
           example: 1200993
         effectiveDate:
@@ -31,7 +31,7 @@ payload:
           format: date
           example: '2025-09-03'
         enteredById:
-          type: integer
+          type: string
           description: NOMIS staff id of creator
           example: 487759
         nomsNumber:
@@ -40,7 +40,7 @@ payload:
           pattern: '[A-Z][0-9]{4}[A-Z]{2}'
           example: G4793VF
         offenderRestrictionId:
-          type: integer
+          type: string
           description: NOMIS id of the restriction record
           example: 196081
         restrictionType:

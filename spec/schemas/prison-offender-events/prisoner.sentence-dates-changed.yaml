@@ -11,7 +11,7 @@ payload:
       required: [bookingId, nomsNumber, sentenceCalculationId]
       properties:
         bookingId:
-          type: integer
+          type: string
           description: ID of the booking record in NOMIS
           example: 1209333
         nomsNumber:
@@ -20,7 +20,7 @@ payload:
           pattern: '[A-Z][0-9]{4}[A-Z]{2}'
           example: A5763DZ
         sentenceCalculationId:
-          type: integer
+          type: string
           description: NOMIS ID of the sentence calculation
           example: 5639097
     description:

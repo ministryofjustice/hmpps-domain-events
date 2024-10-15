@@ -14,7 +14,7 @@ payload:
       required: [bookingId, nomsNumber, reason, removedNomsNumber]
       properties:
         bookingId:
-          type: integer
+          type: string
           description: NOMIS booking id for the prisoner
           example: 1221664
         nomsNumber:
