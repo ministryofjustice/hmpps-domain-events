@@ -7,9 +7,11 @@ description: |
 contentType: application/json
 payload:
   type: object
+  required: [additionalInformation, description, detailUrl, eventType, occurredAt, personReference, version]
   properties:
     additionalInformation:
       type: object
+      required: [categoriesChanged, nomsNumber]
       properties:
         categoriesChanged:
           type: array
@@ -38,32 +40,32 @@ payload:
           example: A0260DZ
     description:
       type: string
-      enum: [A prisoner record has been updated]
-      example: A prisoner record has been updated
+      const: A prisoner record has been updated
     detailUrl:
       type: string
       description: A link to the prisoner in prisoner search
       example: https://prisoner-search-dev.prison.service.justice.gov.uk/prisoner/A0260DZ
     eventType:
       type: string
-      enum: [prisoner-offender-search.prisoner.updated]
-      example: prisoner-offender-search.prisoner.updated
+      const: prisoner-offender-search.prisoner.updated
     occurredAt:
       type: string
       description: The date and time the event occurred
+      format: date-time
       example: '2024-10-11T12:21:26.399052029+01:00'
     personReference:
       type: object
+      required: [identifiers]
       properties:
         identifiers:
           type: array
           items:
             - type: object
+              required: [type, value]
               properties:
                 type:
                   type: string
-                  enum: [NOMS]
-                  example: NOMS
+                  const: NOMS
                 value:
                   type: string
                   pattern: '[A-Z][0-9]{4}[A-Z]{2}'
