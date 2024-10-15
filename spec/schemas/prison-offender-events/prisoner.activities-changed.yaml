@@ -1,0 +1,64 @@
+name: prison-offender-events.prisoner.activities-changed
+title: prison-offender-events.prisoner.activities-changed
+summary: A prisoner's activities have been changed
+contentType: application/json
+payload:
+  type: object
+  required: [additionalInformation, description, eventType, occurredAt, personReference, publishedAt, version]
+  properties:
+    additionalInformation:
+      type: object
+      required: [action, prisonId, user]
+      properties:
+        action:
+          type: string
+          description: The choice the user made as to whether to end or suspend activities
+          enum: [END, SUSPEND]
+          example: END
+        prisonId:
+          type: string
+          description: Three character Prison code
+          pattern: '[A-Z]{3}'
+          example: RSI
+        user:
+          type: string
+          description: NOMIS user that made the change
+          example: ADAVIES_GEN
+    description:
+      type: string
+      const: A prisoner's activities have been changed
+    eventType:
+      type: string
+      const: prison-offender-events.prisoner.activities-changed
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2024-09-06T13:39:09+01:00'
+    personReference:
+      type: object
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  const: NOMS
+                value:
+                  type: string
+                  description: Prison number of the prisoner
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  example: G8824VX
+    publishedAt:
+      type: string
+      description: The date and time the event was published
+      format: date-time
+      example: '2024-09-06T13:39:09.957056466+01:00'
+    version:
+      type: integer
+      description: Version of this event message. Currently 1
+      example: 1

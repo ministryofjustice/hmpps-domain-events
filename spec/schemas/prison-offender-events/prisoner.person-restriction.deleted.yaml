@@ -65,10 +65,10 @@ payload:
           example: DIHCON
     description:
       type: string
-      example: A prisoner person restriction record has been deleted
+      const: A prisoner person restriction record has been deleted
     eventType:
       type: string
-      example: prison-offender-events.prisoner.person-restriction.deleted
+      const: prison-offender-events.prisoner.person-restriction.deleted
     occurredAt:
       type: string
       description: The date and time the event occurred
