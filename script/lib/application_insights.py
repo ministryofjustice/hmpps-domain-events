@@ -17,13 +17,13 @@ def ai_request(query):
     return json.loads(response.text)
 
 
-def single_domain_event(event_type):
+def single_domain_event(event_type, days):
 
     # Grab the custom events for a single event type
     query = f"""customEvents
          | where cloud_RoleName in ('hmpps-domain-event-logger')
          | where name == '{event_type}'
-         | where timestamp between((ago(7d)) .. now())
+         | where timestamp between((ago({days}d)) .. now())
          | order by timestamp desc
          | limit 1
     """
@@ -33,7 +33,7 @@ def single_domain_event(event_type):
     # Do we have any messages?
     if len(full_response["tables"][0]["rows"]) == 0:
         sys.exit(
-            f"No domain event message found for '{event_type}' in Application Insights in the previous seven days"
+            f"No domain event message found for '{event_type}' in Application Insights in the previous {days} days"
         )
 
     raw_message = json.loads(full_response["tables"][0]["rows"][0][3])["rawMessage"]

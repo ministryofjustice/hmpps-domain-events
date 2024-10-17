@@ -12,11 +12,12 @@ if __name__ == "__main__":
         description="Generate an AsyncAPI message spec from an HMPPS domain event message."
     )
     parser.add_argument("event", type=str, help="An HMPPS domain event type")
-    parser.add_argument("-j", "--json", action="store_true")
+    parser.add_argument("-j", "--json", action="store_true", help="output json instead of yaml")
+    parser.add_argument("-d", "--days", default="7", help="output json instead of yaml")
     args = parser.parse_args()
 
     # Grab a single application insights domain event message
-    message = lib.application_insights.single_domain_event(args.event)
+    message = lib.application_insights.single_domain_event(args.event, args.days)
 
     if args.json:
         print(json.dumps(message))
