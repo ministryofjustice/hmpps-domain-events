@@ -1,0 +1,108 @@
+name: prison-offender-events.video-appointment.cancelled
+title: prison-offender-events.video-appointment.cancelled
+summary: A prisoner's video appointment has been cancelled
+description: |
+   This event is raised when a video appointment type is cancelled or deleted in NOMIS, and is in response to 
+   receiving the NOMIS Xtag <b>SCHEDULE_INT_APP-CHANGED</b> event. It is used primarily by
+   the <b>Book a Video Link</b> service to detect prison cancellations of court and probation video meetings.
+   <p>
+   The video appointment types which will trigger this event when cancelled are:
+   <ul>
+     <li>VLB : Video Link - Court Hearing</li>
+     <li>VLOO : Video Link - Official Other</li>
+     <li>VLPM : Video Link - Probation Meeting</li>
+     <li>VLPA : Video Link - Parole Appointment</li>
+     <li>VLLA : Video Link - Legal Appointment</li>
+     <li>VLAP : Video Link - Another Prison</li>
+   </ul>
+contentType: application/json
+payload:
+  type: object
+  required: [additionalInformation, description, eventType, occurredAt, personReference, publishedAt, version]
+  properties:
+    additionalInformation:
+      type: object
+      required: [bookingId, scheduleEventId, scheduledStartTime, scheduleEventClass, scheduleEventType, scheduleEventSubType, scheduleEventStatus, recordDeleted, agencyLocationId]
+      properties:
+        bookingId:
+          type: string
+          description: The booking identifier for the prisoner related to this appointment
+          example: 1245646
+        scheduleEventId:
+          type: string
+          description: The internal movement event ID for this appointment in NOMIS
+          example: 87866733
+        scheduledStartTime:
+          type: string
+          description: The start time for the appointment
+          format: date-time
+          example: '2024-09-02T16:15'
+        scheduledEndTime:
+          type: string
+          description: The end time for the appointment
+          format: date-time
+          example: '2024-09-02T17:15'
+        scheduleEventClass:
+          type: string
+          description: The type of event in NOMIS
+          example: 'INT_MOV'
+        scheduleEventType:
+          type: string
+          description: The internal movement type
+          example: 'APP'
+        scheduleEventSubType:
+          type: string
+          description: The appointment type in NOMIS
+          enum: [VLB,VLPM,VLOO,VLPA,VLAP,VLLA]
+          example: 'VLPM'
+        scheduleEventStatus:
+          type: string
+          description: The event status in NOMIS
+          enum: [SCH,CANC,EXP]
+          example: 'CANC'
+        recordDeleted:
+          type: boolean
+          description: Whether the record has been deleted in NOMIS
+          example: 'true'
+        agencyLocationId:
+          type: string
+          description: The prison code where the change took place
+          example: 'MDI'
+    description:
+      type: string
+      const: A video appointment has been cancelled
+    eventType:
+      type: string
+      const: prison-offender-events.video-appointment.cancelled
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2024-09-02T16:13:38+01:00'
+    personReference:
+      type: object
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  const: NOMS
+                value:
+                  type: string
+                  description: Prison number of the prisoner
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  example: G5300UX
+    publishedAt:
+      type: string
+      description: The date and time the event was published
+      format: date-time
+      example: '2024-09-02T16:13:38.741731020+01:00'
+    version:
+      type: integer
+      description: Version of this event message. Currently 1
+      example: 1
