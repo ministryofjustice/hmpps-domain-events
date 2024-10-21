@@ -22,12 +22,8 @@ payload:
   properties:
     additionalInformation:
       type: object
-      required: [bookingId, scheduleEventId, scheduledStartTime, scheduleEventClass, scheduleEventType, scheduleEventSubType, scheduleEventStatus, recordDeleted, agencyLocationId]
+      required: [scheduleEventId, scheduledStartTime, scheduleEventSubType, scheduleEventStatus, recordDeleted, agencyLocationId]
       properties:
-        bookingId:
-          type: string
-          description: The booking identifier for the prisoner related to this appointment
-          example: 1245646
         scheduleEventId:
           type: string
           description: The internal movement event ID for this appointment in NOMIS
@@ -42,14 +38,6 @@ payload:
           description: The end time for the appointment
           format: date-time
           example: '2024-09-02T17:15'
-        scheduleEventClass:
-          type: string
-          description: The type of event in NOMIS
-          example: 'INT_MOV'
-        scheduleEventType:
-          type: string
-          description: The internal movement type
-          example: 'APP'
         scheduleEventSubType:
           type: string
           description: The appointment type in NOMIS
