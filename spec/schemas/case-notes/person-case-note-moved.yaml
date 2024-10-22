@@ -1,0 +1,59 @@
+contentType: application/json
+name: person.case-note.moved
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        id:
+          example: 11217e7c-bf69-4fef-8098-f5b42b1ac175
+          type: string
+        legacyId:
+          example: 67281754
+          type: number
+        type:
+          example: 'OMIC'
+          type: string
+        subType:
+          example: 'GEN'
+          type: string
+        source:
+          example: 'DPS'
+          type: string
+        syncToNomis:
+          example: true
+          type: boolean
+        previousNomsNumber:
+          example: A1234BC
+          type: string
+    description:
+      example: A case note has been moved to another person
+      type: string
+    detailUrl:
+      example: https://case-notes-api.hmpps.service.justice.gov.uk/case-notes/A6342YZ/11217e7c-bf69-4fef-8098-f5b42b1ac175
+      type: string
+    eventType:
+      example: person.case-note.moved
+      type: string
+    occurredAt:
+      example: '2024-09-23T09:31:58.58471645+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+            - properties:
+                type:
+                  example: NOMS
+                  type: string
+                value:
+                  example: A6342YZ
+                  type: string
+              type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A case note has been moved to another person
+title: person.case-note.moved
