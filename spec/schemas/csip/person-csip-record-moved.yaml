@@ -1,0 +1,44 @@
+contentType: application/json
+name: person.csip-record.moved
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        recordUuid:
+          example: 9ef0e5ca-a5cc-4345-9cf3-02fa2e996a95
+          type: string
+        previousNomsNumber:
+          example: A4528BC
+          type: string
+    description:
+      example: A CSIP record has been moved in the CSIP service
+      type: string
+    detailUrl:
+      example: https://csip-api.hmpps.service.justice.gov.uk/csip-records/9ef0e5ca-a5cc-4345-9cf3-02fa2e996a95
+      type: string
+    eventType:
+      example: person.csip-record.moved
+      type: string
+    occurredAt:
+      example: '2024-07-15T09:03:38.927167845+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+            - properties:
+                type:
+                  example: NOMS
+                  type: string
+                value:
+                  example: A7779DY
+                  type: string
+              type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A CSIP record has been moved in the CSIP service
+title: person.csip-record.moved
