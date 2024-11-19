@@ -12,7 +12,7 @@ payload:
   properties:
     additionalInformation:
       type: object
-      required: [bookingId, movedFromNomsNumber, movedToNomsNumber]
+      required: [bookingId, movedFromNomsNumber, movedToNomsNumber, bookingStartDateTime]
       properties:
         bookingId:
           type: string
@@ -28,6 +28,11 @@ payload:
           pattern: '[A-Z][0-9]{4}[A-Z]{2}'
           description: Prison number of the prisoner (this will be prisoner record that now holds the booking)
           example: A8491EA
+        bookingStartDateTime:
+          type: string
+          description: Start date and time of the booking
+          format: date-time
+          example: 2023-12-05T12:34:56+00:00
     description:
       type: string
       const: a NOMIS booking has moved between prisoners
