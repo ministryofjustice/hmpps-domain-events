@@ -1,0 +1,62 @@
+name: prisoner-offender-search.prisoner.convicted-status-changed
+title: prisoner-offender-search.prisoner.convicted-status-changed
+summary: A prisoner had their convicted status changed
+description: This is when a prisoner alerts have altered.
+contentType: application/json
+payload:
+  type: object
+  required: [additionalInformation, description, detailUrl, eventType, occurredAt, personReference, version]
+  properties:
+    additionalInformation:
+      type: object
+      required: [convictedStatus, bookingId, nomsNumber]
+      properties:
+        convictedStatus:
+          example: Convicted
+          type: string
+        bookingId:
+          type: integer
+          description: NOMIS booking id for the prisoner
+          example: 1205032
+        nomsNumber:
+          type: string
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          description: The prison number of the prisoner
+          example: A1350DZ
+    description:
+      type: string
+      description: Information on the new convicted status
+      example: 'A prisoner had their convicted status changed to Remand'
+    detailUrl:
+      type: string
+      description: A link to the prisoner in prisoner search
+      example: https://prisoner-search-dev.prison.service.justice.gov.uk/prisoner/A1350DZ
+    eventType:
+      type: string
+      const: prisoner-offender-search.prisoner.convicted-status-changed
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2024-10-11T15:22:59.105827778+01:00'
+    personReference:
+      type: object
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  const: NOMS
+                value:
+                  type: string
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  description: The prison number of the prisoner
+                  example: A1350DZ
+    version:
+      example: '1.0'
+      type: string
