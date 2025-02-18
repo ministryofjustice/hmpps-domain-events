@@ -58,6 +58,5 @@ payload:
                   description: The prison number of the prisoner
                   example: A1350DZ
     version:
-      type: integer
-      description: Version of this event message. Currently 1
-      example: 1
+      example: '1.0'
+      type: string
