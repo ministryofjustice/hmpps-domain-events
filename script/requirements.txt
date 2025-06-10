@@ -2,4 +2,4 @@ check-jsonschema==0.30.0
 hiyapyco==0.6.1
 pathvalidate==3.2.1
 PyYAML==6.0.2
-Requests==2.32.3
+Requests==2.32.4
