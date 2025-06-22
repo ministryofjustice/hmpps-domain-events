@@ -31,6 +31,10 @@ payload:
           description: Where the report was amended
           enum: [DPS, NOMIS]
           example: DPS
+        location:
+          description: Establishment code or PECS region where incident happened
+          type: string
+          example: MDI
         whatChanged:
           description: The part of the report that changed
           example: QUESTIONS
@@ -39,9 +43,8 @@ payload:
             - BASIC_REPORT
             - TYPE
             - STATUS
+            - DESCRIPTION_ADDENDUMS
             - PRISONERS_INVOLVED
             - STAFF_INVOLVED
-            - LOCATIONS
-            - EVIDENCE
             - CORRECTION_REQUESTS
             - QUESTIONS
