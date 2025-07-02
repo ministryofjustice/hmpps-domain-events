@@ -1,0 +1,36 @@
+contentType: application/json
+name: interventions.community.referral.created
+payload:
+  properties:
+    description:
+      example: An Interventions referral in community has been created.
+      type: string
+    detailUrl:
+      example: https://find-and-refer-intervention-dev.hmpps.service.justice.gov.uk/referral/1a2b31d5-3508-4f3a-983e-f952d78ef843
+      type: string
+    eventType:
+      example: interventions.community.referral.created
+      type: string
+    occurredAt:
+      example: 2025-07-02T13:32:00.209063+01:00
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+            - properties:
+                type:
+                  example: CRN
+                  type: string
+                value:
+                  example: X928972
+                  type: string
+              type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An An Interventions referral in community has been created.
+title: interventions.community.referral.created
