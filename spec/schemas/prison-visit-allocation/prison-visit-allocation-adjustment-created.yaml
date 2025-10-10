@@ -1,0 +1,48 @@
+contentType: application/json
+name: prison-visit-allocation.adjustment.created
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        prisonerId:
+          example: AA123456
+          type: string
+        adjustmentId:
+          example: 1938831
+          type: string
+        hasBalanceChanged:
+          example: true
+          type: boolean
+      type: object
+    description:
+      example: Prisoner balance adjusted by hmpps-visit-allocation-api
+      type: string
+    detailUrl:
+      example: null
+      type: string
+    eventType:
+      example: prison-visit-allocation.adjustment.created
+      type: string
+    occurredAt:
+      example: '2024-05-01T19:28:58Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A5276DZ
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An event to signify prisoner's balance has been adjusted by hmpps-visit-allocation-api
+title: prison-visit-allocation.adjustment.created
