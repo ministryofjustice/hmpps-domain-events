@@ -1,0 +1,63 @@
+name: prison-offender-events.prisoner.fine-payment.changed
+title: prison-offender-events.prisoner.fine-payment.changed
+summary: A prisoner's fine payment has changed
+contentType: application/json
+payload:
+  type: object
+  required: [additionalInformation, description, eventType, occurredAt, personReference, publishedAt, version]
+  properties:
+    additionalInformation:
+      type: object
+      required: [bookingId, nomsNumber, paymentSequence]
+      properties:
+        bookingId:
+          type: string
+          description: ID of the booking record in NOMIS
+          example: 1209333
+        nomsNumber:
+          type: string
+          description: Prison number of the prisoner
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          example: A5763DZ
+        paymentSequence:
+          type: integer
+          description: The sequence number within the booking
+          example: 1
+    description:
+      type: string
+      const: A prisoner's fine payment has changed
+    eventType:
+      type: string
+      const: prison-offender-events.prisoner.fine-payment.changed
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2024-10-14T12:49:12+01:00'
+    personReference:
+      type: object
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  const: NOMS
+                value:
+                  type: string
+                  description: Prison number of the prisoner
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  example: A5763DZ
+    publishedAt:
+      type: string
+      description: The date and time the event was published
+      format: date-time
+      example: '2024-10-14T12:49:12.184941119+01:00'
+    version:
+      type: integer
+      description: Version of this event message. Currently 1
+      example: 1
