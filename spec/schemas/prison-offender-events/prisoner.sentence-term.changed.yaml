@@ -1,6 +1,8 @@
 name: prison-offender-events.prisoner.sentence-term.changed
 title: prison-offender-events.prisoner.sentence-term.changed
 summary: A prisoner's sentence term has been changed
+description: |
+  This event is raised when a prisoner's sentence term is updated, added or deleted.
 contentType: application/json
 payload:
   type: object

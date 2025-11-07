@@ -2,6 +2,8 @@ name: prison-offender-events.prisoner.fine-payment.changed
 title: prison-offender-events.prisoner.fine-payment.changed
 summary: A prisoner's fine payment has changed
 contentType: application/json
+description: |
+  This event is raised when a fine for a prisoner is added, updated or deleted.
 payload:
   type: object
   required: [additionalInformation, description, eventType, occurredAt, personReference, publishedAt, version]
@@ -14,11 +16,6 @@ payload:
           type: string
           description: ID of the booking record in NOMIS
           example: 1209333
-        nomsNumber:
-          type: string
-          description: Prison number of the prisoner
-          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
-          example: A5763DZ
         paymentSequence:
           type: integer
           description: The sequence number within the booking
