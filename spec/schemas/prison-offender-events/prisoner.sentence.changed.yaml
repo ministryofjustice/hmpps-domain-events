@@ -1,6 +1,9 @@
 name: prison-offender-events.prisoner.sentence.changed
 title: prison-offender-events.prisoner.sentence.changed
 summary: A prisoner's sentence has changed
+description: |
+  This event is raised when a prisoner's sentence term is updated, added or deleted.
+  We would recommend consumers to ensure their handler is idempotent; there are scenarios where multiple events may be raised for the same prisoner.
 contentType: application/json
 payload:
   type: object

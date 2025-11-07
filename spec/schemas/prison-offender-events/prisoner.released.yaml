@@ -4,7 +4,7 @@ summary: A prisoner has been released from prison
 description: |
   This event is raised when a prisoner is released from prison, this includes temporary releases
   such as court appearances and transfers. We would recommend consumers to ensure their service is idempotent,
-  there are scenarios where multiple events maybe raised for same release.
+  there are scenarios where multiple events may be raised for same release.
   <h4>Delayed events</h4>
   <div>
     The events <b>prison-offender-events.prisoner.received</b> and <b>prison-offender-events.prisoner.released</b> have a
