@@ -1,0 +1,42 @@
+contentType: application/json
+name: prison-visit-booker.visitor-rejected
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        requestReference:
+          example: abc-def-ghi
+          type: string
+      type: object
+    description:
+      example: Booker's prisoner, has a visitor request rejected.
+      type: string
+    detailUrl:
+      example: null
+      type: string
+    eventType:
+      example: prison-visit-booker.visitor-rejected
+      type: string
+    occurredAt:
+      example: '2024-05-01T19:28:58Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: NOMS
+                type: string
+              value:
+                example: A5276DZ
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An event to signify a booker's prisoner, has a visitor request rejected by hmpps-prison-visit-booker-registry
+title: prison-visit-booker.visitor-rejected
