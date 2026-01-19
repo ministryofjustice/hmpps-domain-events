@@ -40,5 +40,5 @@ payload:
       example: 1
       type: integer
   type: object
-summary: An temporary absence has been recategorised.
+summary: A temporary absence has been recategorised.
 title: person.temporary-absence.recategorised
