@@ -1,0 +1,44 @@
+contentType: application/json
+name: person.external-movement.comments-changed
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        id:
+          example: 31a9d034-0587-41da-8528-dd1c54452250
+          type: string
+        source:
+          example: DPS
+          type: string
+    description:
+      example: The comments on a temporary absence movement have been changed.
+      type: string
+    detailUrl:
+      example: null
+      type: string
+    eventType:
+      example: person.external-movement.comments-changed
+      type: string
+    occurredAt:
+      example: '2025-12-01T09:10:15.123456789+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+            - properties:
+                type:
+                  example: NOMS
+                  type: string
+                value:
+                  example: A9111DZ
+                  type: string
+              type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: The comments on a temporary absence movement have been changed.
+title: person.external-movement.comments-changed
