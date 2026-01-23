@@ -1,23 +1,29 @@
 contentType: application/json
-name: person.external-movement.recorded-out-temporarily
+name: person.temporary-absence.started
 payload:
   properties:
     additionalInformation:
+      required: [id, source]
       properties:
         id:
           example: 31a9d034-0587-41da-8528-dd1c54452250
+          description: Id of the movement
+          type: string
+        occurrenceId:
+          example: 52e0da14-5398-4826-ba89-5ffe64426e92
+          description: Optional id of the scheduled occurrence. Absence of the id means it was unscheduled.
           type: string
         source:
           example: DPS
           type: string
     description:
-      example: A person has been temporarily released from prison.
+      example: A temporary absence has started.
       type: string
     detailUrl:
       example: null
       type: string
     eventType:
-      example: person.external-movement.recorded-out-temporarily
+      example: person.temporary-absence.started
       type: string
     occurredAt:
       example: '2025-12-01T09:10:15.123456789+01:00'
@@ -40,5 +46,5 @@ payload:
       example: 1
       type: integer
   type: object
-summary: A person has been temporarily released from prison.
-title: person.external-movement.recorded-out-temporarily
+summary: A temporary absence has started.
+title: person.temporary-absence.started
