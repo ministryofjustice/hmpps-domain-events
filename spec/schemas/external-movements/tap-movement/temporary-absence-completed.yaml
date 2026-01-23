@@ -3,9 +3,15 @@ name: person.temporary-absence.completed
 payload:
   properties:
     additionalInformation:
+      required: [id, source]
       properties:
         id:
           example: 31a9d034-0587-41da-8528-dd1c54452250
+          description: Id of the movement
+          type: string
+        occurrenceId:
+          example: 52e0da14-5398-4826-ba89-5ffe64426e92
+          description: Optional id of the scheduled occurrence. Absence of the id means it was unscheduled.
           type: string
         source:
           example: DPS
