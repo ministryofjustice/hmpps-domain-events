@@ -1,5 +1,5 @@
 contentType: application/json
-name: person.external-movement.accompaniment-changed
+name: person.temporary-absence-movement.accompaniment-changed
 payload:
   properties:
     additionalInformation:
@@ -17,7 +17,7 @@ payload:
       example: null
       type: string
     eventType:
-      example: person.external-movement.accompaniment-changed
+      example: person.temporary-absence-movement.accompaniment-changed
       type: string
     occurredAt:
       example: '2025-12-01T09:10:15.123456789+01:00'
@@ -41,4 +41,4 @@ payload:
       type: integer
   type: object
 summary: The accompaniment of a temporary absence movement has been changed.
-title: person.external-movement.accompaniment-changed
+title: person.temporary-absence-movement.accompaniment-changed
