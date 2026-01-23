@@ -1,5 +1,5 @@
 contentType: application/json
-name: person.external-movement.recategorised
+name: person.temporary-absence-movement.recategorised
 payload:
   properties:
     additionalInformation:
@@ -17,7 +17,7 @@ payload:
       example: null
       type: string
     eventType:
-      example: person.external-movement.recategorised
+      example: person.temporary-absence-movement.recategorised
       type: string
     occurredAt:
       example: '2025-12-01T09:10:15.123456789+01:00'
@@ -41,4 +41,4 @@ payload:
       type: integer
   type: object
 summary: A temporary absence movement has been recategorised.
-title: person.external-movement.recategorised
+title: person.temporary-absence-movement.recategorised

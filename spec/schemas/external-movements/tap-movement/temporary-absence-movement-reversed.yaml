@@ -1,5 +1,5 @@
 contentType: application/json
-name: person.external-movement.reversed
+name: person.temporary-absence-movement.reversed
 payload:
   properties:
     additionalInformation:
@@ -17,7 +17,7 @@ payload:
       example: null
       type: string
     eventType:
-      example: person.external-movement.reversed
+      example: person.temporary-absence-movement.reversed
       type: string
     occurredAt:
       example: '2025-12-01T09:10:15.123456789+01:00'
@@ -41,4 +41,4 @@ payload:
       type: integer
   type: object
 summary: A temporary movement direction has been reversed.
-title: person.external-movement.reversed
+title: person.temporary-absence-movement.reversed
