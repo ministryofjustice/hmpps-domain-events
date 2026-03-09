@@ -1,0 +1,42 @@
+name: probation.appointment.sms-sent-to-pop
+title: SMS being sent to person on probation
+summary: An sms is sent to the person on probation with regards to their appointment
+contentType: application/json
+payload:
+  type: object
+  properties:
+    eventType:
+      type: string
+      example: "probation.appointment.sms-sent-to-pop"
+    version:
+      type: integer
+      example: 1
+    detailUrl:
+      type: string
+      example: "https://probation-supervision-appointments-api-dev.hmpps.service.justice.gov.uk/sms/message/38ade96c-d62c-4814-b202-7883d5f73605"
+    occurredAt:
+      type: string
+      example: "2026-03-01T12:00:00.000Z"
+    description:
+      type: string
+      example: "The event is the SMS being sent to the PoP"
+    additionalInformation:
+      type: object
+      properties:
+        applicationId:
+          type: string
+          example: "14547a9f-20e8-4643-8a15-402a7d8845fb"
+    personReference:
+      type: object
+      properties:
+        identifiers:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                example: "CRN"
+              value:
+                type: string
+                example: "X371199"
