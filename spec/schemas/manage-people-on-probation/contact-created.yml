@@ -1,6 +1,6 @@
-name: manage-people-on-probation.contact.created
-title: New contact created when sms is sent
-summary: An sms is sent to the person on probation regarding their appointment
+name: probation.appointment.sms-sent-to-pop
+title: SMS being sent to person on probation
+summary: An sms is sent to the person on probation with regards to their appointment
 contentType: application/json
 payload:
   type: object
@@ -19,7 +19,7 @@ payload:
       example: "2026-03-01T12:00:00.000Z"
     description:
       type: string
-      example: "An sms has been sent to the person on probation, which is logged as a contact"
+      example: "The event is the SMS being sent to the PoP"
     additionalInformation:
       type: object
       properties:
