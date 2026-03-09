@@ -1,6 +1,6 @@
 name: manage-people-on-probation.contact.created
 title: New contact created when sms is sent
-summary: A new sms is sent to the person on probation
+summary: An sms is sent to the person on probation regarding their appointment
 contentType: application/json
 payload:
   type: object
