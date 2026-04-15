@@ -1,6 +1,6 @@
 name: prison-offender-events.prisoner.dietary.information.updated
 title: prison-offender-events.prisoner.dietary.information.updated
-summary: A prisoner's dietary information has been created or updated.
+summary: 'A prisoner had their dietary information created or updated.'
 description: |
   Produced whenever any of the following health and medication fields is updated for a prisoner:
     <ul>
