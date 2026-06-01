@@ -1,6 +1,6 @@
-name: prison-offender-events.prisoner.booking.moved
-title: prison-offender-events.prisoner.booking.moved
-summary: A NOMIS booking has moved between prisoners
+name: prison-offender-events.prisoner.booking.deleted
+title: prison-offender-events.prisoner.booking.deleted
+summary: A NOMIS booking has been deleted
 description: |
   This is raised when a NOMIS booking is deleted typically as part of a entire prisoner recorded being deleted from NOMIS. However, that can be raised when just a NOMIS booking is deleted. Though the entities associated with the booking will be deleted which typically results in the NOMIS to DPS synchronisation is deleting the associated entities in DPS, DPS may also need to update entities on other bookings that were previously on an older booking which has now become current. This can affect DPS UI filters.
 contentType: application/json
