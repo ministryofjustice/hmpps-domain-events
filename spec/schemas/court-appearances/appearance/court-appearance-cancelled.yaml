@@ -1,0 +1,49 @@
+contentType: application/json
+name: person.court-appearance.cancelled
+payload:
+  properties:
+    additionalInformation:
+      required: [id, source]
+      properties:
+        id:
+          example: 31a9d034-0587-41da-8528-dd1c54452250
+          type: string
+        source:
+          example: DPS
+          type: string
+        externalReference:
+          example: 'urn:remand-and-sentencing:court-appearance:8d37e550-f6e6-4d78-9d86-81b3d24dfa39'
+          type: string
+          description: "Reference to the representation in another system following the format 'urn:service-name:entity-type:uuid'"
+    description:
+      example: A court appearance has been cancelled
+      type: string
+    detailUrl:
+      example: null
+      type: string
+    eventType:
+      example: person.court-appearance.cancelled
+      type: string
+    occurredAt:
+      example: '2025-12-01T09:10:15.123456789+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+            - properties:
+                type:
+                  example: NOMS
+                  type: string
+                value:
+                  example: A9111DZ
+                  type: string
+              type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A court appearance has been cancelled
+title: person.court-appearance.cancelled
