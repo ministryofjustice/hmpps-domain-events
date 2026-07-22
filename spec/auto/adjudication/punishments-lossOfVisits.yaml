@@ -1,0 +1,81 @@
+contentType: application/json
+name: adjudication.punishments.lossOfVisits
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        chargeNumber:
+          example: MDI-000169
+          type: string
+        prisonerNumber:
+          example: A7780DY
+          type: string
+        prisonId:
+          example: MDI
+          type: string
+        status:
+          example: CHARGE_PROVED
+          type: string
+        lossOfVisits:
+          properties:
+            changeType:
+              enum:
+                - AWARDED
+                - UPDATED
+                - REMOVED
+                - QUASHED
+                - UNQUASHED
+              example: AWARDED
+              type: string
+            visitsPunishments:
+              items:
+                properties:
+                  punishmentId:
+                    example: 1941573
+                    type: integer
+                  type:
+                    example: LOSS_OF_SOCIAL_VISITS
+                    type: string
+                  duration:
+                    example: 27
+                    type: integer
+                  measurement:
+                    example: DAYS
+                    type: string
+                  startDate:
+                    example: '2026-07-22'
+                    format: date
+                    type: string
+                  endDate:
+                    example: '2026-08-17'
+                    format: date
+                    type: string
+                  suspendedUntil:
+                    description: Present only when the punishment is suspended.
+                    format: date
+                    type: string
+                  activatedByChargeNumber:
+                    description: Present when the punishment was activated by another adjudication.
+                    type: string
+                  hasChildUnder18:
+                    example: false
+                    type: boolean
+                type: object
+              type: array
+          type: object
+      type: object
+    description:
+      example: 'Adjudication loss of visits changed:  MDI-000169'
+      type: string
+    eventType:
+      example: adjudication.punishments.lossOfVisits
+      type: string
+    occurredAt:
+      example: '2026-07-22T09:30:00.000000000+01:00'
+      type: string
+    version:
+      example: '1.0'
+      type: string
+  type: object
+summary: 'Adjudication loss of visits changed:  MDI-000169'
+title: adjudication.punishments.lossOfVisits
