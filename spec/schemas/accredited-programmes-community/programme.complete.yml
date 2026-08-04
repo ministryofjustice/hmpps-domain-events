@@ -1,15 +1,15 @@
 contentType: application/json
-name: accredited-programmes-community.referral.status-updated
+name: accredited-programmes-community.programme.complete
 payload:
   properties:
     description:
-      example: The person is ready to be allocated to a programme group.
+      example: An Accredited Programmes referral in community has been completed.
       type: string
     detailUrl:
-      example: https://accredited-programmes-manage-and-deliver-api-dev.hmpps.service.justice.gov.uk/referral/3e759ff8-d2f1-43cb-9e19-bd2006e841d8/status-change-details
+      example: https://accredited-programmes-manage-and-deliver-api-dev.hmpps.service.justice.gov.uk/referral/3e759ff8-d2f1-43cb-9e19-bd2006e841d8/completion-data
       type: string
     eventType:
-      example: accredited-programmes-community.referral.status-updated
+      example: accredited-programmes-community.programme.complete
       type: string
     occurredAt:
       example: 2025-07-02T14:14:17.51815+01:00
@@ -32,5 +32,5 @@ payload:
       example: 1
       type: integer
   type: object
-summary: An Accredited Programmes referral in community has had it's status updated.
-title: accredited-programmes-community.referral.status-updated
+summary: An Accredited Programmes referral in community has been completed.
+title: accredited-programmes-community.programme.complete
