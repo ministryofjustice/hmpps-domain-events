@@ -32,7 +32,7 @@ payload:
           items:
           - properties:
               type:
-                example: NOMIS
+                example: NOMS
                 type: string
               value:
                 example: A5276DZ
