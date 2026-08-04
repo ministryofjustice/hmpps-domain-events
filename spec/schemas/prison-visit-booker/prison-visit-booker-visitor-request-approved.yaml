@@ -1,27 +1,21 @@
 contentType: application/json
-name: prison-visit-booker.visitor-approved
+name: prison-visit-booker.visitor-request-approved
 payload:
   properties:
     additionalInformation:
       properties:
-        bookerReference:
+        requestReference:
           example: abc-def-ghi
-          type: string
-        prisonerId:
-          example: AA123456
-          type: string
-        visitorId:
-          example: 123456
           type: string
       type: object
     description:
-      example: Booker's prisoner, has a visitor added to their list.
+      example: Booker's prisoner has a visitor request approved.
       type: string
     detailUrl:
       example: null
       type: string
     eventType:
-      example: prison-visit-booker.visitor-approved
+      example: prison-visit-booker.visitor-request-approved
       type: string
     occurredAt:
       example: '2024-05-01T19:28:58Z'
@@ -32,7 +26,7 @@ payload:
           items:
           - properties:
               type:
-                example: NOMS
+                example: NOMIS
                 type: string
               value:
                 example: A5276DZ
@@ -44,5 +38,5 @@ payload:
       example: 1
       type: integer
   type: object
-summary: An event to signify a booker's prisoner, has a visitor added to their list. by hmpps-prison-visit-booker-registry
-title: prison-visit-booker.visitor-approved
+summary: An event to signify a booker's prisoner has a visitor request approved by hmpps-prison-visit-booker-registry
+title: prison-visit-booker.visitor-request-approved

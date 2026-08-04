@@ -1,0 +1,48 @@
+contentType: application/json
+name: prison-visit-booker.visitor-linked
+payload:
+  properties:
+    additionalInformation:
+      properties:
+        bookerReference:
+          example: abc-def-ghi
+          type: string
+        prisonerId:
+          example: AA123456
+          type: string
+        visitorId:
+          example: 123456
+          type: string
+      type: object
+    description:
+      example: Booker's prisoner has a visitor linked.
+      type: string
+    detailUrl:
+      example: null
+      type: string
+    eventType:
+      example: prison-visit-booker.visitor-linked
+      type: string
+    occurredAt:
+      example: '2024-05-01T19:28:58Z'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+          - properties:
+              type:
+                example: NOMIS
+                type: string
+              value:
+                example: A5276DZ
+                type: string
+            type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An event to signify a booker's prisoner has a visitor linked by hmpps-prison-visit-booker-registry
+title: prison-visit-booker.visitor-linked
