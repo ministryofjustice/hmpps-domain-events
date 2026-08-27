@@ -1,0 +1,48 @@
+contentType: application/json
+name: person.transfer-movement.occurred-at-changed
+payload:
+  properties:
+    additionalInformation:
+      required: [id, source, stage]
+      properties:
+        id:
+          example: 01a043ab-ce48-7542-ab30-6c65bf63e893
+          type: string
+        source:
+          example: DPS
+          type: string
+        stage:
+          example: SCHEDULED
+          type: string
+    description:
+      example: When a transfer movement occurred has been changed
+      type: string
+    detailUrl:
+      example: null
+      type: string
+    eventType:
+      example: person.transfer-movement.occurred-at-changed
+      type: string
+    occurredAt:
+      example: '2026-08-28T09:10:15.123456789+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+            - properties:
+                type:
+                  example: NOMS
+                  type: string
+                value:
+                  example: A1234BC
+                  type: string
+              type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: The comments on a transfer movement have been changed
+title: person.transfer-movement.occurred-at-changed

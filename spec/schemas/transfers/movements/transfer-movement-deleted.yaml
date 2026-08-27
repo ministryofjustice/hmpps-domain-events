@@ -1,0 +1,45 @@
+contentType: application/json
+name: person.transfer-movement.deleted
+payload:
+  properties:
+    additionalInformation:
+      required: [id, source]
+      properties:
+        id:
+          example: 01a043ab-ce48-7542-ab30-6c65bf63e893
+          type: string
+        source:
+          example: DPS
+          type: string
+    description:
+      example: A transfer movement has been deleted
+      type: string
+    detailUrl:
+      example: null
+      type: string
+    eventType:
+      example: person.transfer-movement.deleted
+      type: string
+    occurredAt:
+      example: '2026-08-28T09:10:15.123456789+01:00'
+      type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+            - properties:
+                type:
+                  example: NOMS
+                  type: string
+                value:
+                  example: A1234BC
+                  type: string
+              type: object
+          type: array
+      type: object
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A transfer movement has been deleted
+title: person.transfer-movement.deleted
