@@ -26,3 +26,15 @@ payload:
           description: Prisoner number
           type: string
           example: "A1111AA"
+        incentiveLevel:
+          description: Incentive level code the prisoner holds after this update
+          type: string
+          example: "STD"
+        previousIncentiveLevel:
+          description: Incentive level code the prisoner held before this update, absent if there was no earlier review to compare
+          type: string
+          example: "BAS"
+        incentiveLevelChanged:
+          description: Whether this update changed the prisoner's incentive level, absent if there was no earlier review to compare
+          type: boolean
+          example: true
