@@ -33,6 +33,11 @@ payload:
           description: Start date and time of the booking
           format: date-time
           example: 2023-12-05T12:34:56+00:00
+        bookingEndDateTime:
+          type: string
+          description: End date and time of the booking
+          format: date-time
+          example: 2025-12-05T12:34:56+00:00
     description:
       type: string
       const: a NOMIS booking has moved between prisoners
