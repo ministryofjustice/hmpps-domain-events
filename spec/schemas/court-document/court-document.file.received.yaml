@@ -1,0 +1,28 @@
+contentType: application/json
+name: court-document.file.received
+payload:
+  properties:
+    additionalInformation:
+      required: [courtDocumentId, prisonDocumentId, prisonerNumber]
+      properties:
+        courtDocumentId:
+          example: 0aa3ece7-a9b2-4c3b-aa04-1c812af09947
+          type: string
+          description: The UUID of the document in the HMCTS API
+        prisonDocumentId:
+          example: 90e6af4a-fcda-4fef-97cb-56d43474919f
+          type: string
+          description: The UUID of the document in the hmmps-document-management-api
+        prisonerNumber:
+          example: AS14012C
+          type: string
+      type: object
+    eventType:
+      example: court-document.file.received
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A court document has been received from Common Platform
+title: court-document.file.received
