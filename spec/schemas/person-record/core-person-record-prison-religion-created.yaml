@@ -1,0 +1,56 @@
+name: core-person-record.prison.religion.created
+title: core-person-record.prison.religion.created
+summary: A prison religion record has been created for a person
+description: |
+  Published when a prison religion record is created for a person in Core Person Record.
+contentType: application/json
+payload:
+  type: object
+  required: [additionalInformation, description, detailUrl, eventType, occurredAt, personReference, version]
+  properties:
+    additionalInformation:
+      type: object
+      required: [cprReligionId]
+      properties:
+        cprReligionId:
+          type: string
+          format: uuid
+          description: The identifier of the prison religion record in Core Person Record
+          example: 11111111-2222-3333-4444-555555555555
+    description:
+      type: string
+      const: A prison religion has been created for a person
+    detailUrl:
+      type: string
+      description: URL to the prison religion record in Core Person Record
+      example: https://hmpps-person-record-dev.hmpps.service.justice.gov.uk/person/prison/A1234AA/religion/11111111-2222-3333-4444-555555555555
+    eventType:
+      type: string
+      const: core-person-record.prison.religion.created
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2026-10-06T10:46:42.163+01:00'
+    personReference:
+      type: object
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            - type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  const: prisonNumber
+                value:
+                  type: string
+                  pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+                  description: The prison number of the person
+                  example: A1234AA
+    version:
+      type: integer
+      description: Version of this event message. Currently 1
+      example: 1
