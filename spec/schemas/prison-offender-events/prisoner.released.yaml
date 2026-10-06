@@ -67,6 +67,7 @@ payload:
               <li><b>OUTSIDE_PRISON</b> prisoner no longer in a prison</li>
               <li><b>BEING_TRANSFERRED</b> prisoner is being transferred</li>
             </ul>
+            Omitted if the current location cannot be determined.
           enum: [IN_PRISON, OUTSIDE_PRISON, BEING_TRANSFERRED]
           example: OUTSIDE_PRISON
         currentPrisonStatus:
@@ -77,11 +78,14 @@ payload:
               <li><b>UNDER_PRISON_CARE</b> even if the prison is out of prison they are still attached to a prison and has not been discharged</li>
               <li><b>NOT_UNDER_PRISON_CARE</b> prisoner has been discharged from prison</li>
             </ul>
+            Omitted if the current prison status cannot be determined.
           enum: [UNDER_PRISON_CARE, NOT_UNDER_PRISON_CARE]
           example: NOT_UNDER_PRISON_CARE
         details:
           type: string
-          description: Further human readable information about the reason. The contents is developer focused and not to be relied on.
+          description: |
+            Further human readable information about the reason. The contents is developer focused and not to be relied on.
+            Omitted for temporary absence releases, court appearances and transfers.
           example: Movement reason code CR
         nomisMovementReasonCode:
           type: string
