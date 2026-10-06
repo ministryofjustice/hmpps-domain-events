@@ -68,6 +68,7 @@ payload:
               <li><b>OUTSIDE_PRISON</b> prisoner no longer in a prison</li>
               <li><b>BEING_TRANSFERRED</b> prisoner is being transferred</li>
             </ul>
+            Omitted if the current location cannot be determined.
           enum: [IN_PRISON, OUTSIDE_PRISON, BEING_TRANSFERRED]
           example: IN_PRISON
         currentPrisonStatus:

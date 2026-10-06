@@ -17,7 +17,7 @@ payload:
         bookingId:
           type: string
           description: NOMIS booking id for the prisoner
-          example: 1221642
+          example: '1221642'
         movedFromNomsNumber:
           type: string
           pattern: '[A-Z][0-9]{4}[A-Z]{2}'
@@ -30,14 +30,12 @@ payload:
           example: A8491EA
         bookingStartDateTime:
           type: string
-          description: Start date and time of the booking
-          format: date-time
-          example: 2023-12-05T12:34:56+00:00
+          description: Start date and time of the booking, without a timezone offset
+          example: '2023-12-05T12:34:56'
         bookingEndDateTime:
           type: string
-          description: End date and time of the booking
-          format: date-time
-          example: 2025-12-05T12:34:56+00:00
+          description: End date and time of the booking, without a timezone offset
+          example: '2025-12-05T12:34:56'
     description:
       type: string
       const: a NOMIS booking has moved between prisoners
