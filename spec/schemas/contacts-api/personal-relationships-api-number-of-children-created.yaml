@@ -1,0 +1,80 @@
+name: personal-relationships-api.number-of-children.created
+title: personal-relationships-api.number-of-children.created
+summary: A number of children record has been created
+description: Published by hmpps-personal-relationships-api.
+contentType: application/json
+payload:
+  type: object
+  required: [eventType, additionalInformation, version, description, occurredAt]
+  properties:
+    eventType:
+      type: string
+      const: personal-relationships-api.number-of-children.created
+    additionalInformation:
+      type: object
+      required: [prisonerNumberOfChildrenId, source, username]
+      properties:
+        prisonerNumberOfChildrenId:
+          type: integer
+          format: int64
+          description: ID of the prisoner's number-of-children record in the Personal Relationships API.
+        source:
+          type: string
+          enum: [DPS, NOMIS]
+          description: DPS for changes made through this service; NOMIS for changes received through
+            NOMIS synchronisation.
+        username:
+          type: string
+          description: Username attributed to the change. SYS is used when no actor is supplied by a
+            system operation.
+        activeCaseLoadId:
+          type: [string, 'null']
+          deprecated: true
+          description: Deprecated and marked for eventual removal. Always null and omitted from
+            published JSON. Do not rely on this field for the user's current caseload.
+    personReference:
+      type: object
+      description: Identifiers of the contact and/or prisoner affected by the change. May be omitted
+        when no person reference is supplied.
+      required: [identifiers]
+      properties:
+        identifiers:
+          type: array
+          items:
+            type: object
+            required: [type, value]
+            properties:
+              type:
+                type: string
+                enum: [NOMS]
+              value:
+                type: string
+                description: Prison number for NOMS, or the numeric contact ID encoded as a string
+                  for DPS_CONTACT_ID.
+    version:
+      type: string
+      description: Event version. The current publisher serializes this as the string "1".
+    description:
+      type: string
+      example: A number of children record has been created
+    occurredAt:
+      type: string
+      description: Event occurrence time, serialized by the current publisher as a local ISO-8601
+        date-time without a UTC offset.
+      example: '2026-10-22T10:00:00'
+examples:
+  - name: dps-change
+    summary: A DPS-originated change with the deprecated caseload field omitted.
+    payload:
+      eventType: personal-relationships-api.number-of-children.created
+      additionalInformation:
+        prisonerNumberOfChildrenId: 12345
+        source: DPS
+        username: CONTACTS_USER
+      personReference:
+        identifiers:
+          - type: NOMS
+            value: A1234BC
+      version: '1'
+      description: A number of children record has been created
+      occurredAt: '2026-10-22T10:00:00'
