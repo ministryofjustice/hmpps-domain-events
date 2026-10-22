@@ -9,7 +9,7 @@ payload:
       properties:
         visitSlotId:
           example: 123456
-          type: long
+          type: integer
         source:
           example: 'DPS'
           type: string
