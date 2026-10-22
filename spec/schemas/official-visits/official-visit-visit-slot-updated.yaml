@@ -1,0 +1,33 @@
+contentType: application/json
+name: official-visits-api.visit-slot.updated
+payload:
+  properties:
+    eventType:
+      example: official-visits-api.visit-slot.updated
+      type: string
+    additionalInformation:
+      properties:
+        visitSlotId:
+          example: 123456
+          type: long
+        source:
+          example: 'DPS'
+          type: string
+        username:
+          example: 'X32434'
+          type: string
+        prisonId:
+          example: 'LEI'
+          type: string
+    description:
+      example: An official visit slot has been updated
+      type: string
+    occurredAt:
+      example: '2024-07-15T09:03:38.927167845+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An official visit slot has been updated
+title: official-visits-api.visit-slot.updated

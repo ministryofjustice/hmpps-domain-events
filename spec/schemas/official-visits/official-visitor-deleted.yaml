@@ -1,0 +1,58 @@
+contentType: application/json
+name: official-visits-api.visitor.deleted
+payload:
+  properties:
+    eventType:
+      example: official-visits-api.visitor.deleted
+      type: string
+    additionalInformation:
+      properties:
+        officialVisitId:
+          example: 123456
+          type: long
+        officialVisitorId:
+          example: 8787878
+          type: long
+        source:
+          example: 'DPS'
+          type: string
+        username:
+          example: 'X32434'
+          type: string
+        prisonId:
+          example: 'LEI'
+          type: string
+    personReference:
+      properties:
+        identifiers:
+          items:
+            - properties:
+                type:
+                  example: 'NOMS'
+                  type: string
+                value:
+                  example: 'A1234AA'
+                  type: string
+              type: object
+            - properties:
+                type:
+                  example: 'CONTACT_ID'
+                  type: string
+                value:
+                  example: '8787878'
+                  type: string
+              type: object
+          type: array
+      type: object
+    description:
+      example: A visitor has been removed from an official visit
+      type: string
+    occurredAt:
+      example: '2024-07-15T09:03:38.927167845+01:00'
+      type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: A visitor has been removed from an official visit
+title: official-visits-api.visitor.deleted
