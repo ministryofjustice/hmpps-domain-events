@@ -9,10 +9,10 @@ payload:
       properties:
         officialVisitId:
           example: 123456
-          type: long
+          type: integer
         officialVisitorId:
           example: 8787878
-          type: long
+          type: integer
         source:
           example: 'DPS'
           type: string
