@@ -1,0 +1,33 @@
+name: incident.report.amended
+title: Incident reporting service – a report was amended
+contentType: application/json
+payload:
+  type: object
+  properties:
+    version:
+      const: 1
+    eventType:
+      const: incident.report.amended
+    occurredAt:
+      type: string
+      format: date-time
+      example: 2023-12-05T12:34:56+00:00
+    description:
+      type: string
+      example: An incident report has been amended
+    additionalInformation:
+      type: object
+      properties:
+        userId:
+          description: The ID of the user who owns the account
+          type: string
+          format: uuid
+          example: 11111111-2222-3333-4444-555555555555
+        legacyStaffId:
+          description: The legacy staff ID of the user who owns the account
+          type: string
+          example: 12345
+        username:
+          description: The account username
+          type: string
+          example: ATURNER_GEN
