@@ -1,5 +1,5 @@
-name: incident.report.amended
-title: Incident reporting service – a report was amended
+name: prison-users.user.account.unlocked
+title: Prison Users API – a user account was unlocked
 contentType: application/json
 payload:
   type: object
@@ -7,14 +7,14 @@ payload:
     version:
       const: 1
     eventType:
-      const: incident.report.amended
+      const: prison-users.user.account.unlocked
     occurredAt:
       type: string
       format: date-time
       example: 2023-12-05T12:34:56+00:00
     description:
       type: string
-      example: An incident report has been amended
+      example: A prison user account has been unlocked
     additionalInformation:
       type: object
       properties:
