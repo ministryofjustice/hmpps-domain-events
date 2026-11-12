@@ -25,7 +25,7 @@ payload:
           example: 11111111-2222-3333-4444-555555555555
         legacyStaffId:
           description: The legacy staff ID of the user who owns the account
-          type: string
+          type: integer
           example: 12345
         username:
           description: The account username
