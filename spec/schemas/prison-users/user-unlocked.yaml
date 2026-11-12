@@ -1,0 +1,33 @@
+name: prison-users.user.account.unlocked
+title: Prison Users API – a user account was unlocked
+contentType: application/json
+payload:
+  type: object
+  properties:
+    version:
+      const: 1
+    eventType:
+      const: prison-users.user.account.unlocked
+    occurredAt:
+      type: string
+      format: date-time
+      example: 2023-12-05T12:34:56+00:00
+    description:
+      type: string
+      example: A prison user account has been unlocked
+    additionalInformation:
+      type: object
+      properties:
+        userId:
+          description: The ID of the user who owns the account
+          type: string
+          format: uuid
+          example: 11111111-2222-3333-4444-555555555555
+        legacyStaffId:
+          description: The legacy staff ID of the user who owns the account
+          type: integer
+          example: 12345
+        username:
+          description: The account username
+          type: string
+          example: ATURNER_GEN
