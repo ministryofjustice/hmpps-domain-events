@@ -1,0 +1,36 @@
+contentType: application/json
+name: accredited-programmes-community.programme.started
+payload:
+  properties:
+    description:
+      example: An Accredited Programmes referral in community has attended their first pre-group one-to-one and started the programme.
+      type: string
+    detailUrl:
+      example: https://accredited-programmes-manage-and-deliver-api-dev.hmpps.service.justice.gov.uk/referral/3e759ff8-d2f1-43cb-9e19-bd2006e841d8/start-data
+      type: string
+    eventType:
+      example: accredited-programmes-community.programme.started
+      type: string
+    occurredAt:
+      example: 2025-07-02T14:14:17.51815+01:00
+      type: string
+    personReference:
+      type: object
+      properties:
+        identifiers:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                example: CRN
+                type: string
+              value:
+                example: X945794
+                type: string
+    version:
+      example: 1
+      type: integer
+  type: object
+summary: An Accredited Programmes referral in community has attended their first pre-group one-to-one and started the programme.
+title: accredited-programmes-community.programme.started
