@@ -1,0 +1,52 @@
+name: prison-property.container.updated
+title: prison-property.container.updated
+summary: A property container has been updated
+description: |
+  This event is raised when a property container is updated.
+contentType: application/json
+payload:
+  type: object
+  required: [prisonerNumber, eventType, occurredAt, version]
+  properties:
+    prisonerNumber:
+      type: string
+      description: Prison number of the prisoner
+      pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+      example: A5763DZ
+    additionalInformation:
+      type: object
+      required: [dpsId]
+      properties:
+        dpsId:
+          type: string
+          format: uuid
+          description: ID of the DPS record
+          example: '123e4567-e89b-12d3-a456-426614174000'
+        changedFields:
+          type: string
+          description: Fields that were changed
+          example: 'receivingPrisonId,sealNumber,location,containerType,proposedDisposalDate,removalOutcome'
+        removedNomsNumber:
+          type: string
+          description: Prison number of a prisoner that was merged and removed from the container, if applicable
+          pattern: '[A-Z][0-9]{4}[A-Z]{2}'
+          example: A5763DZ
+    description:
+      type: string
+      const: A prisoner property container was changed in DPS
+    eventType:
+      type: string
+      const: prison-property.container.updated
+    occurredAt:
+      type: string
+      description: The date and time the event occurred
+      format: date-time
+      example: '2024-10-14T12:49:12+01:00'
+    source:
+      type: string
+      description: The source of the event, DPS or NOMIS
+      example: DPS
+    version:
+      type: integer
+      description: Version of this event message. Currently 1
+      example: 1
